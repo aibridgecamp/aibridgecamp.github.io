@@ -94,7 +94,19 @@ hr {
   color: white;
 }
 
+@keyframes gradient {
+  from {
+    background-color: auto;
+    color: auto;
+  }
+  to {
+    background-color: #004665;
+    color: white;
+  }
+}
+
 .navbar-content a:hover {
-  background-color: #005676;
-  color: white;
+  animation-name: gradient;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
 }
