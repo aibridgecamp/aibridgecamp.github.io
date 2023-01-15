@@ -1,3 +1,17 @@
+/** Main stylesheet
+* A lot of this was copied over from jemoka.com
+* 
+* Ordering:
+* - Basic Tags
+* - Tags 
+* - Classes 
+* - IDs 
+* 
+* @rules go directly before their first implementation
+* 
+*/
+
+
 html {
   width: 100vw;
   height: 100vh;
@@ -70,7 +84,7 @@ a:not(.navbar-content a):hover {
 .main {
   overflow-wrap: break-word;
 
-  padding-bottom: 40vh;
+  padding-bottom: 25vh;
   padding-top: 20px;
 }
 
@@ -110,7 +124,6 @@ a:not(.navbar-content a):hover {
     background-color: auto;
     color: auto;
   }
-
   to {
     background-color: #004665;
     color: white;
