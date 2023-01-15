@@ -7,8 +7,6 @@
 * - Classes 
 * - IDs 
 * 
-* @rules go directly before their first implementation
-* 
 */
 
 
@@ -71,6 +69,13 @@ hr {
   height: 1px;
 }
 
+.main {
+  overflow-wrap: break-word;
+
+  padding-bottom: 25vh;
+  padding-top: 20px;
+}
+
 a:not(.navbar-content a) {
   text-decoration: none;
   color: inherit;
@@ -82,11 +87,8 @@ a:not(.navbar-content a):hover {
   border-bottom: solid 4px #dade8a;
 }
 
-.main {
-  overflow-wrap: break-word;
-
-  padding-bottom: 25vh;
-  padding-top: 20px;
+.banner img {
+  max-width: 50vw;
 }
 
 .navbar {
@@ -146,4 +148,18 @@ a:not(.navbar-content a):hover {
 .photo-gallery img {
   width: 100%;
   height: auto;
+}
+
+/* Mobile Device Settings */
+@media (max-width: 800px) {
+  .body {
+    max-width: 90vw;
+  }
+  .main {
+    padding-top: 10px;
+    padding-bottom: 10vh;
+  }
+  .img {
+    max-width: 80vw;
+  }
 }
