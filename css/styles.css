@@ -35,7 +35,7 @@ figure {
 
 h1 {
   font-size: 25px;
-  
+
   margin: 0;
   margin-top: 30px;
   padding: 0;
@@ -54,6 +54,17 @@ hr {
   border: none;
 
   height: 1px;
+}
+
+a:not(.navbar-content a) {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: solid 1.25px #dade8a;
+  transition: border-width 0.3s;
+}
+
+a:not(.navbar-content a):hover {
+  border-bottom: solid 4px #dade8a;
 }
 
 .main {
@@ -99,6 +110,7 @@ hr {
     background-color: auto;
     color: auto;
   }
+
   to {
     background-color: #004665;
     color: white;
