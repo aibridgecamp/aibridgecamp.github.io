@@ -6,7 +6,6 @@
 * - Normal Tags 
 * - Classes 
 * - IDs 
-* 
 */
 
 
@@ -20,7 +19,7 @@ html {
 body {
   font-family: "IBM Plex Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-  font-size: 1.2vw;
+  font-size: 16px;
 
   max-width: 60vw;
 
@@ -37,7 +36,7 @@ li {
 }
 
 img {
-  max-width: 60vw;
+  max-width: 100%;
 }
 
 figure {
@@ -45,7 +44,7 @@ figure {
 }
 
 h1 {
-  font-size: 1.5vw;
+  font-size: 25px;
 
   margin: 0;
   margin-top: 30px;
@@ -53,7 +52,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1vw;
+  font-size: 20px;
 
   margin: 0;
   margin-top: 30px;
@@ -118,7 +117,7 @@ button:hover {
 }
 
 .banner img {
-  max-width: 50vw;
+  max-width: 100%;
 }
 
 .navbar {
@@ -132,6 +131,7 @@ button:hover {
 
 .navbar-content {
   float: left;
+  width: fit-content;
 }
 
 .navbar-content a {
@@ -141,10 +141,7 @@ button:hover {
   text-align: left;
   text-decoration: none;
 
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px;
 }
 
 .navbar-content .active {
@@ -181,7 +178,7 @@ button:hover {
 }
 
 .textbox {
-  font-size: 16px;
+  font-size: 100%;
 
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -189,7 +186,7 @@ button:hover {
 
   width: 100%;
   height: 150px;
-  padding: 12px 8px;
+  padding: 1% 1%;
   margin-top: 2%;
 
   background-color: #ffffff;
@@ -202,19 +199,33 @@ button:hover {
   border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  padding: 0.5% 0.5%;
 
   height: 3%;
-  width: 10%;
+  width: 20%;
+  padding: 0.5% 0.5%;
+  margin-top: 2%;
 
   background-color: #ffffff;
   resize: none;
 }
 
-/* Mobile Device Settings */
-@media (max-width: 1000px) {
-  .body {
+.required-asterisk {
+  color: red;
+}
+
+/* Mobile Device Style Overrides */
+@media (max-width: 800px) {
+  body {
+    font-size: 18px;
     max-width: 90vw;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 
   .main {
@@ -222,7 +233,11 @@ button:hover {
     padding-bottom: 10vh;
   }
 
-  .img {
-    max-width: 80vw;
+  .navbar-content a {
+    font-size: 12px;
+  }
+
+  .photo-gallery {
+    column-count: 1;
   }
 }
