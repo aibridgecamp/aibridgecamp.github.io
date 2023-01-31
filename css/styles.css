@@ -209,12 +209,14 @@ button:hover {
   resize: none;
 }
 
+/* why isn't this being updated?? */
 .about-me-section {
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding-top: 6px;
+  /* github please??? */
 }
 
 .about-me-section img {
@@ -223,6 +225,7 @@ button:hover {
   width: 100%;
   height: 180px;
 }
+/* confusion */
 
 .required-asterisk {
   color: red;
