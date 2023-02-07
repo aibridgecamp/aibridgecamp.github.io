@@ -66,14 +66,14 @@ hr {
   height: 1px;
 }
 
-a:not(.navbar-content a) {
+a:not(.navbar-content a, .banner-registration a) {
   text-decoration: none;
   color: inherit;
   border-bottom: solid 1.25px #dade8a;
   transition: border-width 0.3s;
 }
 
-a:not(.navbar-content a):hover {
+a:not(.navbar-content a, .banner-registration a):hover {
   border-bottom: solid 4px #dade8a;
 }
 
@@ -116,8 +116,46 @@ button:hover {
   padding-top: 20px;
 }
 
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  max-height: fit-content;
+}
+
 .banner img {
-  max-width: 100%;
+  object-fit: contain;
+
+  width: 50%;
+  margin-left: 25%;
+}
+
+.banner-registration {
+  border: 4px solid #004665;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: fit-content;
+  width: 25%;
+  margin-left: 10%;
+}
+
+.banner-registration a {
+  text-decoration: none;
+  color: inherit;
+  padding: 4px;
+  background-color: #ccc;
+
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.banner-registration p {
+  padding: 1%;
 }
 
 .navbar {
@@ -256,6 +294,37 @@ button:hover {
   .main {
     padding-top: 10px;
     padding-bottom: 10vh;
+  }
+
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    max-height: fit-content;
+  }
+
+  .banner img {
+    height: 200px;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .banner-registration {
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: 0;
+    width: 90vw;
+    height: 40px;
+  }
+
+  .banner-registration a {
+    border-radius: 0;
+
+    margin-left: 10%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 
   .navbar-content a {
