@@ -327,8 +327,12 @@ button:hover {
     padding-right: 4%;
   }
 
+  .navbar {
+    margin-top: 5%;
+  }
+
   .navbar-content a {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .photo-gallery {
