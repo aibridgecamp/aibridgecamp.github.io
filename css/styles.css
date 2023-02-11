@@ -38,8 +38,8 @@ body {
   background: var(--main-background-color);
   color: var(--main-text-color);
 
-  /* background-image: url("../img/bg_aibridge_temp.png");
-  background-size: 100% 100%; */
+  background-image: url("../img/bg_aibridge_temp.png");
+  background-size: 100% 100%;
 }
 
 li {
