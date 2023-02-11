@@ -8,6 +8,17 @@
 * - IDs 
 */
 
+:root {
+  --main-text-color: #2e3338;
+  --main-background-color: #f7f7f7;
+  --alt-background-color: #ccc;
+  --main-trim-color: #e0e0e0;
+
+  --main-bold-blue: #004665;
+  --main-light-blue: #007aa9;
+
+  --link-underline-color: #dade8a;
+}
 
 html {
   width: 100vw;
@@ -26,8 +37,11 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 
-  background: #f7f7f7;
-  color: #2e3338;
+  background: var(--main-background-color);
+  color: var(--main-text-color);
+
+  /* background-image: url("../img/bg_aibridge_temp.png");
+  background-size: 100% 100%; */
 }
 
 li {
@@ -60,7 +74,7 @@ h2 {
 }
 
 hr {
-  background-color: #e0e0e0;
+  background-color: var(--main-trim-color);
   border: none;
 
   height: 1px;
@@ -69,12 +83,12 @@ hr {
 a:not(.navbar-content a, .banner-registration a) {
   text-decoration: none;
   color: inherit;
-  border-bottom: solid 1.25px #dade8a;
+  border-bottom: solid 1.25px var(--link-underline-color);
   transition: border-width 0.3s;
 }
 
 a:not(.navbar-content a, .banner-registration a):hover {
-  border-bottom: solid 4px #dade8a;
+  border-bottom: solid 4px var(--link-underline-color);
 }
 
 button {
@@ -82,14 +96,14 @@ button {
   text-align: center;
   text-decoration: none;
 
-  border: 5px solid #f7f7f7;
+  border: 5px solid var(--main-background-color);
   box-sizing: border-box;
 
   display: inline-block;
   padding: 2% 5%;
   margin-top: 1vh;
 
-  background-color: #004665;
+  background-color: var(--main-bold-blue);
   color: white;
 }
 
@@ -98,7 +112,7 @@ button {
     border: auto;
   }
   to {
-    border: 5px solid #007aa9;
+    border: 5px solid var(--main-light-blue);
     box-sizing: border-box;
   }
 }
@@ -132,7 +146,7 @@ button:hover {
 }
 
 .banner-registration {
-  border: 4px solid #004665;
+  border: 4px solid var(--main-bold-blue);
   border-radius: 10px;
 
   display: flex;
@@ -148,7 +162,7 @@ button:hover {
   text-decoration: none;
   color: inherit;
   padding: 4px;
-  background-color: #ccc;
+  background-color: var(--alt-background-color);
 
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -160,7 +174,7 @@ button:hover {
 
 .navbar {
   list-style-type: none;
-  background-color: #e0e0e0;
+  background-color: var(--main-trim-color);
   overflow: hidden;
 
   margin: 0;
@@ -218,7 +232,7 @@ button:hover {
 .textbox {
   font-size: 100%;
 
-  border: 2px solid #ccc;
+  border: 2px solid var(--alt-background-color);
   border-radius: 4px;
   box-sizing: border-box;
 
@@ -227,7 +241,7 @@ button:hover {
   padding: 1% 1%;
   margin-top: 2%;
 
-  background-color: #ffffff;
+  background-color: white;
   resize: none;
 }
 
@@ -243,18 +257,16 @@ button:hover {
   padding: 0.5% 0.5%;
   margin-top: 2%;
 
-  background-color: #ffffff;
+  background-color: white;
   resize: none;
 }
 
-/* why isn't this being updated?? */
 .about-me-section {
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding-top: 6px;
-  /* github please??? */
 }
 
 .about-me-section img {
@@ -263,7 +275,6 @@ button:hover {
   width: 100%;
   height: 180px;
 }
-/* confusion */
 
 .required-asterisk {
   color: red;
