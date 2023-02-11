@@ -21,8 +21,6 @@
 }
 
 html {
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   margin: 0 auto;
 }
@@ -80,6 +78,31 @@ hr {
   height: 1px;
 }
 
+footer {
+  background-color: var(--main-bold-blue);
+  color: var(--alt-background-color);
+
+  display: flex;
+  justify-content: left;
+
+  position: absolute;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  margin-top: 25%;
+  padding: 2vh;
+}
+
+footer p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer img {
+  object-fit: contain;
+  height: 100%;
+}
+
 a:not(.navbar-content a, .banner-registration a) {
   text-decoration: none;
   color: inherit;
@@ -126,7 +149,6 @@ button:hover {
 .main {
   overflow-wrap: break-word;
 
-  padding-bottom: 25vh;
   padding-top: 20px;
 }
 
@@ -302,9 +324,17 @@ button:hover {
     font-size: 20px;
   }
 
+  footer {
+    font-size: 12px;
+    height: fit-content;
+  }
+
+  footer img {
+    height: 75px;
+  }
+
   .main {
     padding-top: 10px;
-    padding-bottom: 10vh;
   }
 
   .banner {
