@@ -23,6 +23,10 @@
 html {
   overflow-x: hidden;
   margin: 0 auto;
+
+  
+  background-image: url("../img/AIBridge_Background.png");
+  background-size: cover;
 }
 
 body {
@@ -30,16 +34,14 @@ body {
   font-weight: 400;
   font-size: 16px;
 
-  max-width: 60vw;
+  max-width: 65vw;
 
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 50px 30% 50px;
 
   background: var(--main-background-color);
   color: var(--main-text-color);
-
-  background-image: url("../img/bg_aibridge_temp.png");
-  background-size: 100% 100%;
+  box-shadow: 0 3px 8px;
 }
 
 li {
@@ -119,7 +121,7 @@ button {
   text-align: center;
   text-decoration: none;
 
-  border: 5px solid var(--main-background-color);
+  border: 5px solid transparent;
   box-sizing: border-box;
 
   display: inline-block;
@@ -181,11 +183,12 @@ button:hover {
 }
 
 .banner-registration a {
-  text-decoration: none;
-  color: inherit;
-  padding: 4px;
-  background-color: var(--alt-background-color);
+  display: flex;
+  justify-content: center;
+}
 
+.banner-registration button {
+  width: 95%;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -343,6 +346,8 @@ button:hover {
     align-items: center;
   
     max-height: fit-content;
+    margin: 0;
+    width: auto;
   }
 
   .banner img {
@@ -355,17 +360,24 @@ button:hover {
     flex-direction: row;
     align-items: center;
 
-    margin-left: 0;
-    width: 90vw;
+    width: 100%;
     height: 40px;
   }
 
   .banner-registration a {
-    border-radius: 0;
+    width: 20%;
+    height: 100%;
 
-    margin-left: 10%;
-    padding-left: 4%;
-    padding-right: 4%;
+    margin-left: auto;
+    margin-right: -1%;
+  }
+
+  .banner-registration button {
+    border-radius: 0;
+    line-height: 50%;
+
+    margin: 0;
+    max-height: 100%;
   }
 
   .navbar {
@@ -383,4 +395,21 @@ button:hover {
   #recruitment-pdf-embed {
     height: 3600px;
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  display: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
