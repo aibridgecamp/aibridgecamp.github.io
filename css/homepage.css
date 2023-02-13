@@ -16,7 +16,7 @@
 
   --link-underline-color: #dade8a;
 
-  --image-blur-style: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  --image-blur-style: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
 }
 
 * {
@@ -112,8 +112,9 @@ a:not(.quick-links a, .dropdown-content a):hover {
 
 /* the dropdown button (png) */
 .dropdown-button {
+  stroke: var(--main-background-color);
   background-color: var(--main-light-blue);
-  opacity: 0.5;
+  opacity: 0.7;
   border-bottom-left-radius: 20%;
 }
 
@@ -177,7 +178,7 @@ a:not(.quick-links a, .dropdown-content a):hover {
 }
 
 .title-text {
-  margin: 6% 20%;
+  margin: 6% 0 1% 20%;
   width: fit-content;
 }
 
