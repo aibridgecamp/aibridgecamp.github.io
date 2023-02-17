@@ -175,6 +175,7 @@ a:not(.quick-links a, .dropdown-content a):hover {
   background-color: var(--main-trim-color);
   box-shadow: 0 0 7px var(--main-bold-blue);
   opacity: 1;
+  cursor: pointer;
 }
 
 .title-text {
