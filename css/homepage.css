@@ -118,13 +118,13 @@ a:not(.quick-links a, .dropdown-content a):hover {
   border-bottom-left-radius: 20%;
 }
 
-/* darken button when hovering over it */
-.dropdown:hover .dropdown-button {
+/* darken button when hovering or focusing */
+.dropdown:hover .dropdown-button, .dropdown:focus .dropdown-button {
   background-color: var(--main-bold-blue);
 }
 
-/* move dropdown menu in from right side when hovering over button */
-.dropdown:hover .dropdown-content {
+/* move dropdown menu in from right side when hovering or focusing */
+.dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
   transition: 0.4s;
   translate: -50%;
   opacity: 0.8;
