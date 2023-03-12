@@ -243,6 +243,10 @@ button:hover {
   animation-fill-mode: forwards;
 }
 
+.strong {
+  font-weight: 600;
+}
+
 .photo-gallery {
   column-count: 3;
   column-gap: 5px;
