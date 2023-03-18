@@ -141,7 +141,7 @@ button {
   }
 }
 
-button:hover :not(.invalid){
+button:hover:not(.invalid){
   animation-name: focus;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
