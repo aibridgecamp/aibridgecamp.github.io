@@ -141,7 +141,7 @@ button {
   }
 }
 
-button:hover {
+button:hover :not(.invalid){
   animation-name: focus;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
@@ -310,6 +310,10 @@ button:hover {
 
 .required-asterisk {
   color: red;
+}
+
+.invalid {
+  opacity: 0.6;
 }
 
 /* Mobile Device Style Overrides */
