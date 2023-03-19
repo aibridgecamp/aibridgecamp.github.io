@@ -236,6 +236,13 @@ a:not(.quick-links a, .dropdown-content a):hover {
   cursor: pointer;
 }
 
+.important-button {
+  box-shadow: 0 0 7px orange;
+  font-size: 0.75em;  
+  background-color: red;
+  margin-top: 50px;
+}
+
 .button:hover {
   border: 2px solid var(--main-trim-color);
   padding: 8px 40px 8px 14px;
