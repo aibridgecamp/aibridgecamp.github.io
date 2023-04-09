@@ -1,0 +1,29 @@
+:root {
+  --main-text-color: #2e3338;
+  --main-background-color: #f7f7f7;
+  --alt-background-color: #ccc;
+  --main-trim-color: #e0e0e0;
+
+  --main-bold-blue: #004665;
+  --main-light-blue: #007aa9;
+
+  --link-underline-color: #dade8a;
+}
+
+.main-content-wrapper {
+  transform-style: preserve-3d;
+  overflow: hidden;
+  perspective: 4px;
+}
+
+.background-img {
+  background-image: url("../img/AIBridge_Background.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
