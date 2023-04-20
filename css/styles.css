@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+*:not(a, input, button, img) {
+  cursor: default;
+}
+
 :root {
   --main-text-color: #2e3338;
   --main-background-color: #f7f7f7;
@@ -74,6 +78,10 @@ img {
 .card img {
   width: 200px;
   border-radius: 0 3px 3px 0;
+}
+
+li[data-toggle="collapse"]:not(li[aria-expanded="true"]), li[data-toggle="collapse"]:not(li[aria-expanded="true"]) * {
+  cursor: pointer !important;
 }
 
 footer {
