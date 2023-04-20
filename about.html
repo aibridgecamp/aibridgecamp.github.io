@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>AIBridge Contact Us</title>
@@ -10,130 +9,162 @@
     <meta name="description" content="TODO" />
     <meta name="keywords" content="aibridge, ai bridge" />
     <meta name="author" content="Jiaming Situ" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/styles.css" />
-</head>
+  </head>
 
-<body>
-    <div class="main">
-        <!-- Begin Banner Image -->
-        <figure class="banner">
-            <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Banner Image" />
-        </figure>
-        <!-- End Banner Image -->
+  <body>
+    <!-- Begin Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand mr-4 mb-0 h1" href="./index.html">
+          <img
+            src="./img/AIBridge_Logo_Hybrid.png"
+            alt="AI Bridge Logo"
+            width="120"
+            height="64"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <a class="nav-link active" href="./about.html"> About Us </a>
+            <a class="nav-link" href="./classes.html"> Classes </a>
+            <a class="nav-link" href="./photos.html"> UC Davis Camp </a>
+            <a class="nav-link" href="./contact.html"> Contact </a>
+            <a class="nav-link" href="./join.html"> Join </a>
+          </ul>
+        </div>
+        <form class="d-flex w-25">
+          <input
+            class="form-control mr-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- End Navbar -->
 
-
-        <!-- Begin Navbar -->
-        <ul class="navbar">
-            <li class="navbar-content">
-                <a href="./index.html"> Home </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./about.html" class="active"> About Us </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./classes.html"> Classes </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./photos.html"> UC Davis Camp </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./contact.html"> Contact </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./join.html"> Join </a>
-            </li>
-        </ul>
-        <!-- End Navbar -->
-
-        <!-- Begin About Me Section -->
-        <div class="about-me-section">
-            <div>
-                <h1>Professor Xin Liu</h1>
-                <p>
-                    Xin Liu is a Computer Science professor at UC Davis. She is a co-PI
-                    and AI cluster lead of the USDA/NSF AI Institute for Next Generation
-                    Food Systems (AIFS), a sponsor of AIBridge. Her research focuses on
-                    machine learning in food systems and healthcare for humans and
-                    animals. Liu, along with Samuel Ren and Houjun Liu, co-created and
-                    taught AIBridge at UC Davis in Summer 2022 and continues to broaden
-                    its reach.
-                </p>
+    <div class="main shadow">
+      <!-- Begin About Me Section -->
+      <div class="about-me-section p-3">
+        <div class="card">
+          <div class="d-flex justify-content-between">
+            <div class="card-body">
+              <h5 class="card-title">Professor Xin Liu</h5>
+              <p class="card-text">
+                Xin Liu is a Computer Science professor at UC Davis. She is a
+                co-PI and AI cluster lead of the USDA/NSF AI Institute for Next
+                Generation Food Systems (AIFS), a sponsor of AIBridge. Her
+                research focuses on machine learning in food systems and
+                healthcare for humans and animals. Liu, along with Samuel Ren
+                and Houjun Liu, co-created and taught AIBridge at UC Davis in
+                Summer 2022 and continues to broaden its reach.
+              </p>
             </div>
-            <img src="./img/about_me_1.png" />
+            <img src="./img/about_me_1.png" class="img-fluid" />
+          </div>
         </div>
-        <hr />
-        <div class="about-me-section">
-            <div>
-                <h1>Houjun (Jack)</h1>
-                <p>
-                    Houjun (Jack) is a 12th grade student at The Nueva School, an independent school in San Mateo, CA.
-                    He has worked on research for the past 4 years in machine learning, and has a specific research
-                    interest in natural language processing (NLP) and language sample analysis (LSA). His publications
-                    surrounding NLP, LSA, and educational pedagogy have been featured in venues including Experimental
-                    Biology and AJSLP. He has received early admission and will be attending Stanford in 2023.
-                </p>
+        <div class="card">
+          <div class="d-flex justify-content-between">
+            <div class="card-body">
+              <h5 class="card-title">Houjun (Jack)</h5>
+              <p class="card-text">
+                Houjun (Jack) is a 12th grade student at The Nueva School, an
+                independent school in San Mateo, CA. He has worked on research
+                for the past 4 years in machine learning, and has a specific
+                research interest in natural language processing (NLP) and
+                language sample analysis (LSA). His publications surrounding
+                NLP, LSA, and educational pedagogy have been featured in venues
+                including Experimental Biology and AJSLP. He has received early
+                admission and will be attending Stanford in 2023.
+              </p>
             </div>
-            <img src="./img/about_me_4.jpeg" />
+            <img src="./img/about_me_4.jpeg" class="img-fluid" />
+          </div>
         </div>
-        <hr />
-        <div class="about-me-section">
-            <div>
-                <h1>Samuel Ren</h1>
-                <p>
-                    Samuel Ren is a Sophomore at Gunn High School. With experience programming since 5th grade, he has
-                    taught four robotic summer camps, and co-developed/taught the first AIBridge bootcamp at UC Davis.
-                    An AIME qualifier since 8th grade and gold-level USA Computing Olympiad competitor, he has won
-                    multiple awards in math and computing competitions. He has a strong interest in machine learning
-                    applications.
-                </p>
+        <div class="card">
+          <div class="d-flex justify-content-between">
+            <div class="card-body">
+              <h5 class="card-title">Samuel Ren</h5>
+              <p class="card-text">
+                Samuel Ren is a Sophomore at Gunn High School. With experience
+                programming since 5th grade, he has taught four robotic summer
+                camps, and co-developed/taught the first AIBridge bootcamp at UC
+                Davis. An AIME qualifier since 8th grade and gold-level USA
+                Computing Olympiad competitor, he has won multiple awards in
+                math and computing competitions. He has a strong interest in
+                machine learning applications.
+              </p>
             </div>
-            <img src="./img/about_me_2.png" />
+            <img src="./img/about_me_2.png" class="img-fluid" />
+          </div>
         </div>
-        <hr />
-        <div class="about-me-section">
-            <div>
-                <h1>Jiaming Situ</h1>
-                <p>
-                    Jiaming Situ is a Junior at Homestead High School who has been coding since 6th grade and coding
-                    competitively since 7th grade. He has studied deep learning through programs at New York University
-                    and Yale and has written an academic paper focused on generative adversarial neural networks.
-                    Jiaming is also a vice president of his school's AI club and teaches other students at his school
-                    about machine learning.
-                </p>
+        <div class="card">
+          <div class="d-flex justify-content-between">
+            <div class="card-body">
+              <h5 class="card-title">Jiaming Situ</h5>
+              <p class="card-text">
+                Jiaming Situ is a Junior at Homestead High School who has been
+                coding since 6th grade and coding competitively since 7th grade.
+                He has studied deep learning through programs at New York
+                University and Yale and has written an academic paper focused on
+                generative adversarial neural networks. Jiaming is also a vice
+                president of his school's AI club and teaches other students at
+                his school about machine learning.
+              </p>
             </div>
-            <img src="./img/about_me_3.jpg" />
+            <img src="./img/about_me_3.jpg" class="img-fluid" />
+          </div>
         </div>
-        <hr />
-        <!-- End About Me Section -->
+      </div>
+      <!-- End About Me Section -->
     </div>
-</body>
+  </body>
 
-<!-- Begin Footer -->
-<footer>
-    <img src="./img/AIFS_logo.png" />
-    <div>
+  <!-- Begin Footer -->
+  <footer class="bg-dark d-flex text-light shadow p-4">
+    <div class="row align-items-center">
+      <div class="col-auto">
+        <img
+          src="./img/AIFS_logo.png"
+          alt="ai food systems logo"
+          class="img-fluid flex-shrink-0"
+        />
+      </div>
+      <div class="container col-md-8 ml-0">
+        <h5 class="">
+          Sponsored by the<a href="https://aifs.ucdavis.edu">
+            AI Institute for Food Systems</a
+          >!
+        </h5>
         <p>
-            <strong>
-                Sponsored by the
-                <a href="https://aifs.ucdavis.edu">
-                    AI Institute for Food Systems
-                </a>
-            </strong>
-            !
+          The AI Institute for Next Generation Food Systems, or AIFS, aims to
+          meet growing demands in our food supply by increasing efficiencies
+          using AI and bioinformatics spanning the entire system — from growing
+          crops through consumption.
         </p>
-        <p>
-            The AI Institute for Next Generation Food Systems, or AIFS, aims to meet growing demands in our food supply
-            by
-            increasing efficiencies using AI and bioinformatics spanning the entire system — from growing crops through
-            consumption.
-        </p>
+      </div>
     </div>
-</footer>
-<!-- End Footer -->
+  </footer>
 
+  <!-- End Footer -->
 </html>
