@@ -39,6 +39,10 @@ img {
   object-fit: cover;
 }
 
+a:not(a:hover) {
+  text-decoration: none;
+}
+
 .main {
   margin: auto;
   padding-bottom: 100px;
@@ -51,24 +55,51 @@ img {
 .navbar-nav a {
   position: relative;
 }
-.navbar-nav a:not(.active)::after {
+
+.navbar-nav a::after {
   content: "";
   position: absolute;
   bottom: 5px;
-  left: 50%; 
+  left: 50%;
   width: 0;
   height: 2px;
   border-radius: 2px;
   background-color: #ccc;
-  transform: translateX(-50%) scaleX(0); 
-  transform-origin: center; 
-  transition: transform 0.2s ease-in-out;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: width 0.2s ease-in-out;
 }
-.navbar-nav a:hover::after {
+
+.navbar-nav a:hover::after,
+.navbar-nav .active::after {
   width: 90%;
-  transform: translateX(-50%) scaleX(1); 
+  transform: translateX(-50%) scaleX(1);
+  transition: width 0.2s ease-in-out;
 }
+
 /* ------------------------- */
+
+#search-results {
+  position: absolute;
+  top: 100%;
+
+  max-height: 0;
+  width: inherit;
+  background-color: #404045;
+  padding: 0 10px;
+  border-radius: 0 0 16px 16px;
+  overflow-y: scroll;
+
+  color: black;
+  transition: height 0.5s ease;
+}
+
+.search-result-item {
+  background-color: #ccc;
+  padding: 8px 10px;
+  margin: 12px 0;
+  border-radius: 16px;
+}
 
 .card {
   width: 90%;
@@ -80,8 +111,92 @@ img {
   border-radius: 0 3px 3px 0;
 }
 
-li[data-toggle="collapse"]:not(li[aria-expanded="true"]), li[data-toggle="collapse"]:not(li[aria-expanded="true"]) * {
+li[data-toggle="collapse"]:not(li[aria-expanded="true"]),
+li[data-toggle="collapse"]:not(li[aria-expanded="true"]) * {
   cursor: pointer !important;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-next *,
+.carousel-control-prev * {
+  cursor: pointer;
+}
+
+a[data-bs-target="#imgCarousel"]> :not(img:hover) {
+  transition: transform 0.2s ease;
+  transform: translate(0, 0);
+}
+
+a[data-bs-target="#imgCarousel"]>img:hover {
+  transition: transform 0.2s ease;
+  transform: translate(0, -10px);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* ----- All for join page ----- */
+/* TODO: refactor entire stylesheet in sass and clean up this section specifically */
+.recruiting-head {
+  background: none !important;
+  border: none !important;
+  text-indent: 2rem;
+}
+.recruiting {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.recruiting > * {
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+
+  background-size: 100%;
+  background-position: center;
+}
+.recruiting-aibridge {
+  background-image: url("../img/aibridge_team.png");
+}
+.recruiting-aibridge > div {
+  width: 40%;
+  margin: 0 1rem 0 auto;
+}
+.recruiting-teacher {
+  background-image: url("../img/aibridge_teacher.png");
+}
+.recruiting-teacher > div {
+  width: 40%;
+  margin: 0 1rem 0 auto;
+}
+.recruiting-ta {
+  background-image: url("../img/aibridge_ta.png");
+  border-radius: 0 0 1rem 1rem;
+}
+.recruiting-ta > div {
+  width: 40%;
+  margin: 0 auto 0 1rem;
+}
+.recruiting-apply {
+  margin: 0 8px;
+  width: 60%;
+}
+.recruiting > div > * {
+  padding: 1rem;
+
+  color: white;
+  background-color: #212529;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+/* -------------------------------- */
+
+.no-bg {
+  background: none !important;
+  border: none !important;
 }
 
 footer {
@@ -127,7 +242,7 @@ footer img {
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   nav {
     font-size: 12px;
   }

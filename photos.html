@@ -3,96 +3,153 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>AIBridge Photos</title>
-    <link rel="icon" href="./img/icon.png" />
-    <meta name="description" content="TODO" />
-    <meta name="keywords" content="aibridge, ai bridge" />
-    <meta name="author" content="Jiaming Situ" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
-    <link rel="stylesheet" href="archive/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>AIBridge Photos</title>
+  <link rel="icon" href="./img/icon.png" />
+  <meta name="description" content="TODO" />
+  <meta name="keywords" content="aibridge, ai bridge" />
+  <meta name="author" content="Jiaming Situ" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="./js/search.js" defer></script> 
 </head>
 
 <body>
-    <div class="main">
-        <!-- Begin Banner Image -->
-        <figure class="banner">
-            <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Banner Image" />
-        </figure>
-        <!-- End Banner Image -->
-
-
-        <!-- Begin Navbar -->
-        <ul class="navbar">
-            <li class="navbar-content">
-                <a href="./index.html"> Home </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./about.html"> About Us </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./classes.html"> Classes </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./photos.html" class="active"> UC Davis Camp </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./contact.html"> Contact </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./join.html"> Join </a>
-            </li>
+  <!-- Begin Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-4 mb-0 h1" href="./index.html">
+        <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Logo" width="120" height="64" />
+      </a>
+      <div class="navbar-nav" id="navbarNav">
+        <ul class="navbar-nav">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./about.html">About Us</a>
+          <a class="nav-link" href="./classes.html">Classes</a>
+          <a class="nav-link active" href="./photos.html">UC Davis Camp</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+          <a class="nav-link" href="./join.html">Join</a>
         </ul>
-        <!-- End Navbar -->
-
-        <!-- Begin Photo Gallery -->
-        <h1>Photos from 2022 UC Davis Camp</h1>
-        <p>
-            Bootcamp Curriculum (no longer in use):
-            <span>
-                <a href="https://www.jemoka.com/posts/kbhaibridge_course_website/">
-                    Website
-                </a>
-            </span>
-        </p>
-        <div class="photo-gallery">
-            <img src="./img/photo1.jpg" />
-            <img src="./img/photo2.jpg" />
-            <img src="./img/photo3.jpg" />
-            <img src="./img/photo4.jpg" />
-            <img src="./img/photo5.jpg" />
-            <img src="./img/photo6.jpg" />
-        </div>
-        <hr />
-        <!-- End Photo Gallery -->
+      </div>
+      <form class="d-flex w-25">
+        <input class="form-control" id="search-input" type="search" placeholder="Search Website" aria-label="Search" />
+        <a class="btn btn-outline-light text-light" id="search-button">Search</a>
+        <div id="search-results" class="shadow"></div>
+      </form>
     </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <div class="main shadow">
+    <div class="photos mx-4 mt-4">
+      <div>
+        <h2>Photos from 2022 UC Davis Camp</h2>
+        <p class="lead">
+          Davis Bootcamp Curriculum (no longer in use):
+          <span>
+            <a href="https://www.jemoka.com/posts/kbhaibridge_course_website/">
+              Website
+            </a>
+          </span>
+        </p>
+      </div>
+
+      <!-- Begin Image Carousel -->
+      <div id="imgCarousel" class="carousel slide shadow w-50 m-4" data-bs-ride="carousel">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="./img/photo1.jpg" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/photo2.jpg" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/photo3.jpg" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/photo4.jpg" alt="Image 4">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/photo5.jpg" alt="Image 5">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/photo6.jpg" alt="Image 6">
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#imgCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-secondary rounded p-4" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#imgCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-secondary rounded p-4" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="row mt-2" id="thumbnail-row">
+        <div class="col-md-2">
+          <a href="#imgCarousel" data-bs-target="#imgCarousel" data-bs-slide-to="0">
+            <img src="./img/photo1.jpg" class="img-thumbnail thumbnail">
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="#imgCarousel" data-bs-target="#imgCarousel" data-bs-slide-to="1">
+            <img src="./img/photo2.jpg" class="img-thumbnail thumbnail">
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="#imgCarousel" data-bs-target="#imgCarousel" data-bs-slide-to="2">
+            <img src="./img/photo3.jpg" class="img-thumbnail thumbnail">
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="#imgCarousel" data-bs-target="#imgCarousel" data-bs-slide-to="3">
+            <img src="./img/photo4.jpg" class="img-thumbnail thumbnail">
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="#imgCarousel" data-bs-target="#imgCarousel" data-bs-slide-to="4">
+            <img src="./img/photo5.jpg" class="img-thumbnail thumbnail">
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="#imgCarousel" data-bs-target="#imgCarousel" data-bs-slide-to="5">
+            <img src="./img/photo6.jpg" class="img-thumbnail thumbnail">
+          </a>
+        </div>
+      </div>
+      <!-- End Image Carousel -->
+    </div>
+  </div>
 </body>
 
 <!-- Begin Footer -->
-<footer>
-    <img src="./img/AIFS_logo.png" />
-    <div>
-        <p>
-            <strong>
-                Sponsored by the
-                <a href="https://aifs.ucdavis.edu">
-                    AI Institute for Food Systems
-                </a>
-            </strong>
-            !
-        </p>
-        <p>
-            The AI Institute for Next Generation Food Systems, or AIFS, aims to meet growing demands in our food supply
-            by
-            increasing efficiencies using AI and bioinformatics spanning the entire system — from growing crops through
-            consumption.
-        </p>
+<footer class="bg-dark d-flex text-light shadow p-4">
+  <div class="row align-items-center">
+    <div class="col-auto">
+      <img src="./img/AIFS_logo.png" alt="ai food systems logo" class="img-fluid flex-shrink-0" />
     </div>
+    <div class="container col-md-8 ml-0">
+      <h5 class="">
+        Sponsored by the<a href="https://aifs.ucdavis.edu">
+          AI Institute for Food Systems</a>!
+      </h5>
+      <p>
+        The AI Institute for Next Generation Food Systems, or AIFS, aims to
+        meet growing demands in our food supply by increasing efficiencies
+        using AI and bioinformatics spanning the entire system — from growing
+        crops through consumption.
+      </p>
+    </div>
+  </div>
 </footer>
 <!-- End Footer -->
 

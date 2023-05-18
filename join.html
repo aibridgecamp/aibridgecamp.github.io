@@ -15,106 +15,126 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
-  <link rel="stylesheet" href="archive/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="./js/search.js" defer></script> 
 </head>
 
 <body>
-  <div class="main">
-    <!-- Begin Banner Image -->
-    <figure class="banner">
-      <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Banner Image" />
-    </figure>
-    <!-- End Banner Image -->
+  <!-- Begin Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-4 mb-0 h1" href="./index.html">
+        <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Logo" width="120" height="64" />
+      </a>
+      <div class="navbar-nav" id="navbarNav">
+        <ul class="navbar-nav">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./about.html">About Us</a>
+          <a class="nav-link" href="./classes.html">Classes</a>
+          <a class="nav-link" href="./photos.html">UC Davis Camp</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+          <a class="nav-link active" href="./join.html">Join</a>
+        </ul>
+      </div>
+      <form class="d-flex w-25">
+        <input class="form-control" id="search-input" type="search" placeholder="Search Website" aria-label="Search" />
+        <a class="btn btn-outline-light text-light" id="search-button">Search</a>
+        <div id="search-results" class="shadow"></div>
+      </form>
+    </div>
+  </nav>
+  <!-- End Navbar -->
 
-
-    <!-- Begin Navbar -->
-    <ul class="navbar">
-      <li class="navbar-content">
-        <a href="./index.html"> Home </a>
-      </li>
-      <li class="navbar-content">
-        <a href="./about.html"> About Us </a>
-      </li>
-      <li class="navbar-content">
-        <a href="./classes.html"> Classes </a>
-      </li>
-      <li class="navbar-content">
-        <a href="./photos.html"> UC Davis Camp </a>
-      </li>
-      <li class="navbar-content">
-        <a href="./contact.html"> Contact </a>
-      </li>
-      <li class="navbar-content">
-        <a href="./join.html" class="active"> Join </a>
-      </li>
-    </ul>
-    <!-- End Navbar -->
-
+  <div class="main pt-0 no-bg">
     <!-- Begin Flyer Notice -->
-    <h1>We are recruiting Teachers and TAs!</h1>
-    <br />
-    <p1>AIBridge:</p1>
-    <ul>
-      <li>We bridge the gap between AI and application domains. </li>
-      <li>First bootcamp offered at UC Davis in June 2022 to 17 graduate students and postdocs. </li>
-      <li>Upcoming training camp at Saratoga Library.</li>
-      <li>Under the mentorship of UC Davis CS professor.</li>
-      <li>Will expand to local schools, public libraries, and universities in summer 2023</li>
-      <li>One summer camp will be offered at UC Davis in the summer 2023. Additional camps in other places are being
-        planned.</li>
-    </ul>
-    <p>Teacher Qualifications:</p>
-    <ul>
-      <li>High school juniors and above, and exceptional sophomores</li>
-      <li>2+ year of Python programming </li>
-      <li>Passion and experience in AI applications</li>
-      <li>Strong public speaking skills</li>
-      <li>Commitment to attend 20 hours of training time (total)</li>
-      <li>Mastery of materials, lectures, and labs.</li>
-      <li>Prior teaching experience preferred</li>
-      <li>Recommended: Attend in-person training at Saratoga Library, California: 3/11, 3/12, 3/18, 3/19: 1pm-5pm PST</li>
-      <li>Teaching such a class takes a fair amount of time and commitment. Please consider your availability seriously.</li>
-    </ul>
-    <p>TA Qualifications:</p>
-    <ul>
-      <li>High school sophomore and above, and exceptional freshman.</li>
-      <li>1+ year of Python programming.</li>
-      <li>Interest in AI </li>
-      <li>Strong communication skills</li>
-      <li>Commitment to attend 5 hours of training time (total).</li>
-      <li>Full understanding of materials and completing labs.</li>
-      <li>Reliability, responsibility, and team-player.</li>
-      <li>Recommended: Attend in-person training at Saratoga Library, California: 3/11, 3/12, 3/18, 3/19: 1pm-5pm PST</li>
-    </ul>
-    <form>
-      <button type="submit" formaction="https://forms.gle/CKBMbLvCffZ9KitS7">
-        <a style="border: none;" href="https://forms.gle/CKBMbLvCffZ9KitS7">Apply Here</a>
-      </button>
-    </form>
+    <div class="recruiting">
+      <div class="recruiting-aibridge">
+        <h2 class="recruiting-head">We are recruiting Teachers and TAs!</h2>
+        <div>
+          <h4>AIBridge:</h4>
+          <ul class="lead">
+            <li>We bridge the gap between AI and application domains. </li>
+            <li>First bootcamp offered at UC Davis in June 2022 to 17 graduate students and postdocs. </li>
+            <li>Upcoming training camp at Saratoga Library.</li>
+            <li>Under the mentorship of UC Davis CS professor.</li>
+            <li>Will expand to local schools, public libraries, and universities in summer 2023</li>
+            <li>One summer camp will be offered at UC Davis in the summer 2023. Additional camps in other places are being planned.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="recruiting-teacher">
+        <div>
+          <h2>Teacher Qualifications:</h2>
+          <ul class="lead">
+            <li>High school juniors and above, and exceptional sophomores</li>
+            <li>2+ year of Python programming </li>
+            <li>Passion and experience in AI applications</li>
+            <li>Strong public speaking skills</li>
+            <li>Commitment to attend 20 hours of training time (total)</li>
+            <li>Mastery of materials, lectures, and labs.</li>
+            <li>Prior teaching experience preferred</li>
+            <li>Recommended: Attend in-person training at Saratoga Library, California: 3/11, 3/12, 3/18, 3/19: 1pm-5pm PST
+            </li>
+            <li>Teaching such a class takes a fair amount of time and commitment. Please consider your availability seriously.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="recruiting-ta">
+        <div>
+          <h2>TA Qualifications:</h2>
+          <ul class="lead">
+            <li>High school sophomore and above, and exceptional freshman.</li>
+            <li>1+ year of Python programming.</li>
+            <li>Interest in AI </li>
+            <li>Strong communication skills</li>
+            <li>Commitment to attend 5 hours of training time (total).</li>
+            <li>Full understanding of materials and completing labs.</li>
+            <li>Reliability, responsibility, and team-player.</li>
+            <li>Recommended: Attend in-person training at Saratoga Library, California: 3/11, 3/12, 3/18, 3/19: 1pm-5pm PST
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="recruiting-apply">
+        <div class="w-100">
+          <p>For more information, contact us at aibridgecamp@gmail.com</p>
+          <hr />
+          <a style="border: none;" href="https://forms.gle/CKBMbLvCffZ9KitS7" target="_blank">
+            <button type="button" class="btn btn-success">
+              Apply For a Position
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
     <!-- End Flyer Notice -->
   </div>
 </body>
 
 <!-- Begin Footer -->
-<footer>
-  <img src="./img/AIFS_logo.png" />
-  <div>
-    <p>
-      <strong>
-        Sponsored by the
-        <a href="https://aifs.ucdavis.edu">
-          AI Institute for Food Systems
-        </a>
-      </strong>
-      !
-    </p>
-    <p>
-      The AI Institute for Next Generation Food Systems, or AIFS, aims to meet growing demands in our food supply by
-      increasing efficiencies using AI and bioinformatics spanning the entire system — from growing crops through
-      consumption.
-    </p>
+<footer class="bg-dark d-flex text-light shadow p-4">
+  <div class="row align-items-center">
+    <div class="col-auto">
+      <img src="./img/AIFS_logo.png" alt="ai food systems logo" class="img-fluid flex-shrink-0" />
+    </div>
+    <div class="container col-md-8 ml-0">
+      <h5 class="">
+        Sponsored by the<a href="https://aifs.ucdavis.edu">
+          AI Institute for Food Systems</a>!
+      </h5>
+      <p>
+        The AI Institute for Next Generation Food Systems, or AIFS, aims to
+        meet growing demands in our food supply by increasing efficiencies
+        using AI and bioinformatics spanning the entire system — from growing
+        crops through consumption.
+      </p>
+    </div>
   </div>
 </footer>
 <!-- End Footer -->
+
 
 </html>

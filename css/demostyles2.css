@@ -1,0 +1,407 @@
+
+
+:root {
+  --main-text-color: #2e3338;
+  --main-background-color: #f7f7f7;
+  --alt-background-color: #ccc;
+  --main-trim-color: #e0e0e0;
+
+  --main-bold-blue: #004665;
+  --main-light-blue: #007aa9;
+
+  --link-underline-color: #dade8a;
+}
+
+html {
+  overflow-x: hidden;
+  margin: 0 auto;
+  
+  background-image: url("../img/AIBridge_Background.png");
+  background-size: cover;
+}
+
+body {
+  font-family: "IBM Plex Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  max-width: 65vw;
+
+  margin: 0 auto;
+  padding: 0 50px 30% 50px;
+
+  background: var(--main-background-color);
+  color: var(--main-text-color);
+  box-shadow: 0 3px 8px;
+}
+
+li {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  text-align: center;
+}
+
+h1 {
+  font-size: 25px;
+
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+}
+
+h2 {
+  font-size: 20px;
+
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+}
+
+hr {
+  background-color: var(--main-trim-color);
+  border: none;
+
+  height: 1px;
+}
+
+footer {
+  background-color: var(--main-bold-blue);
+  color: var(--alt-background-color);
+
+  display: flex;
+  justify-content: left;
+
+  position: absolute;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  margin-top: 25%;
+  padding: 2vh;
+}
+
+footer p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer img {
+  object-fit: contain;
+  height: 100%;
+}
+
+a:not(.navbar-content a, .banner-registration a) {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: solid 1.25px var(--link-underline-color);
+  transition: border-width 0.3s;
+}
+
+a:not(.navbar-content a, .banner-registration a):hover {
+  border-bottom: solid 4px var(--link-underline-color);
+}
+
+button {
+  font-size: 100%;
+  text-align: center;
+  text-decoration: none;
+
+  border: 5px solid transparent;
+  box-sizing: border-box;
+
+  display: inline-block;
+  padding: 2% 5%;
+  margin-top: 1vh;
+
+  background-color: var(--main-bold-blue);
+  color: white;
+}
+
+@keyframes focus {
+  from {
+    border: auto;
+  }
+  to {
+    border: 5px solid var(--main-light-blue);
+    box-sizing: border-box;
+  }
+}
+
+button:hover:not(.invalid){
+  animation-name: focus;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+.main {
+  overflow-wrap: break-word;
+
+  padding-top: 20px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  max-height: fit-content;
+}
+
+.banner img {
+  object-fit: contain;
+
+  width: 50%;
+  margin-left: 25%;
+}
+
+.banner-registration {
+  border: 4px solid var(--main-bold-blue);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: fit-content;
+  width: 25%;
+  margin-left: 10%;
+}
+
+.banner-registration a {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-registration button {
+  width: 95%;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.banner-registration p {
+  padding: 1%;
+}
+
+.navbar {
+  list-style-type: none;
+  background-color: var(--main-trim-color);
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-content {
+  float: left;
+  width: fit-content;
+}
+
+.navbar-content a {
+  display: inline-block;
+  color: #016c66;
+
+  text-align: left;
+  text-decoration: none;
+
+  padding: 8px;
+}
+
+.navbar-content .active {
+  background-color: #005676;
+  color: white;
+}
+
+@keyframes gradient {
+  from {
+    background-color: auto;
+    color: auto;
+  }
+
+  to {
+    background-color: #004665;
+    color: white;
+  }
+}
+
+.navbar-content a:hover {
+  animation-name: gradient;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.photo-gallery {
+  column-count: 3;
+  column-gap: 5px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.textbox {
+  font-size: 100%;
+
+  border: 2px solid var(--alt-background-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 150px;
+  padding: 1% 1%;
+  margin-top: 2%;
+
+  background-color: white;
+  resize: none;
+}
+
+.textbox-small {
+  font-size: 100%;
+
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  height: 3%;
+  width: 20%;
+  padding: 0.5% 0.5%;
+  margin-top: 2%;
+
+  background-color: white;
+  resize: none;
+}
+
+.about-me-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 6px;
+}
+
+.about-me-section p {
+  margin-right: 5%;
+}
+
+.about-me-section img {
+  object-fit: contain;
+
+  height: 180px;
+  margin-left: 0;
+}
+
+.required-asterisk {
+  color: red;
+}
+
+.invalid {
+  opacity: 0.6;
+}
+
+/* Mobile Device Style Overrides */
+@media (max-width: 800px) {
+  body {
+    font-size: 18px;
+    max-width: 90vw;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 12px;
+    height: fit-content;
+  }
+
+  footer img {
+    height: 75px;
+  }
+
+  .main {
+    padding-top: 10px;
+  }
+
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    max-height: fit-content;
+    margin: 0;
+    width: auto;
+  }
+
+  .banner img {
+    height: 200px;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .banner-registration {
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+  }
+
+  .banner-registration a {
+    width: 20%;
+    height: 100%;
+
+    margin-left: auto;
+    margin-right: -1%;
+  }
+
+  .banner-registration button {
+    border-radius: 0;
+    line-height: 50%;
+
+    margin: 0;
+    max-height: 100%;
+  }
+
+  .navbar {
+    margin-top: 5%;
+  }
+
+  .navbar-content a {
+    font-size: 18px;
+  }
+
+  .photo-gallery {
+    column-count: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  display: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
