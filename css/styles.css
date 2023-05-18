@@ -127,6 +127,24 @@ li[data-toggle="collapse"]:not(li[aria-expanded="true"]) * {
   cursor: pointer;
 }
 
+.carousel-indicators {
+  width: 100%;
+  bottom: 0;
+  margin: 0 auto;
+
+  border-radius: 0 0 10px 10px;
+
+  background-color: #333;
+}
+.carousel-indicators > * {
+  height: 10px !important;
+
+  background-color: #ccc;
+}
+.carousel-indicators > .active {
+  background-color: #007aa9;
+}
+
 a[data-bs-target="#imgCarousel"]> :not(img:hover) {
   transition: transform 0.2s ease;
   transform: translate(0, 0);
@@ -139,7 +157,7 @@ a[data-bs-target="#imgCarousel"]>img:hover {
 }
 
 /* ----- All for join page ----- */
-/* TODO: refactor entire stylesheet in sass and clean up this section specifically */
+/* TODO: refactor entire stylesheet in scss and clean up this section specifically */
 .recruiting-head {
   background: none !important;
   border: none !important;
