@@ -1,0 +1,21 @@
+
+All Pages:
+- navbar add home link to the left
+- verify consistency for all pages
+
+Home Page: 
+- change menu bar button to the 3 lines icon
+- move menu bar button to the top left
+
+Classes Page: 
+- expand slideshow to entire width
+- use a sliding bar instead of image thumbnails for slideshow navigation
+
+Join Page:
+- move title to center
+- image vignette filter: black --> light gray
+- white bg, dark text
+- add another element to the right of "Apply for a position" card
+
+
+
