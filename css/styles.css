@@ -161,7 +161,8 @@ a[data-bs-target="#imgCarousel"]>img:hover {
 .recruiting-head {
   background: none !important;
   border: none !important;
-  text-indent: 2rem;
+  color: white !important;
+  text-align: center;
 }
 .recruiting {
   flex-direction: column;
@@ -199,16 +200,15 @@ a[data-bs-target="#imgCarousel"]>img:hover {
   margin: 0 auto 0 1rem;
 }
 .recruiting-apply {
-  margin: 0 8px;
-  width: 60%;
+  
 }
 .recruiting > div > * {
   padding: 1rem;
 
-  color: white;
-  background-color: #212529;
-  border: 1px solid black;
-  border-radius: 1rem;
+  color: black;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 8px;
 }
 /* -------------------------------- */
 
