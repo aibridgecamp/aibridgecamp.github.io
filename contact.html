@@ -3,92 +3,93 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>AIBridge Contact Us</title>
-    <link rel="icon" href="./img/icon.png" />
-    <meta name="description" content="TODO" />
-    <meta name="keywords" content="aibridge, ai bridge" />
-    <meta name="author" content="Jiaming Situ" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
-    <link rel="stylesheet" href="archive/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>AIBridge Contact Us</title>
+  <link rel="icon" href="./img/icon.png" />
+  <meta name="description" content="TODO" />
+  <meta name="keywords" content="aibridge, ai bridge" />
+  <meta name="author" content="Jiaming Situ" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="./js/search.js" defer></script>
 </head>
 
 <body>
-    <div class="main">
-        <!-- Begin Banner Image -->
-        <figure class="banner">
-            <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Banner Image" />
-        </figure>
-        <!-- End Banner Image -->
-
-
-        <!-- Begin Navbar -->
-        <ul class="navbar">
-            <li class="navbar-content">
-                <a href="./index.html"> Home </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./about.html"> About Us </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./classes.html"> Classes </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./photos.html"> UC Davis Camp </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./contact.html" class="active"> Contact </a>
-            </li>
-            <li class="navbar-content">
-                <a href="./join.html"> Join </a>
-            </li>
+  <!-- Begin Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-4 mb-0 h1" href="./index.html">
+        <img src="./img/AIBridge_Logo_Hybrid.png" alt="AI Bridge Logo" width="120" height="64" />
+      </a>
+      <div class="navbar-nav" id="navbarNav">
+        <ul class="navbar-nav">
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./about.html">About Us</a>
+          <a class="nav-link" href="./classes.html">Classes</a>
+          <a class="nav-link" href="./photos.html">UC Davis Camp</a>
+          <a class="nav-link active" href="./contact.html">Contact</a>
+          <a class="nav-link" href="./join.html">Join</a>
         </ul>
-        <!-- End Navbar -->
-
-        <!-- Begin Email Form -->
-        <h1>Email us using the form below</h1>
-        <form action="" method="">
-            <label for="name">Name:</label>
-            <input class="textbox-small" type="text" name="name">
-            <label for="email">Your Email:<span class="required-asterisk">*</span></label>
-            <!-- <input class="textbox-small" type="email" name="email" placeholder="example@gmail.com" required autofocus> -->
-            <input class="textbox-small" type="email" name="email" placeholder="example@gmail.com" required>
-            <label for="email">Recipient:</label>
-            <input class="textbox-small" type="email" name="email" style="width: auto" value="aibridgecamp@gmail.com"
-                readonly>
-            <textarea class="textbox" type="text" name="message" placeholder="THIS FORM IS TEMPORARILY DOWN PLEASE EMAIL US DIRECTLY AT aibridgecamp@gmail.com" required></textarea>
-            <button class="invalid">Send</button>
-        </form>
-        <hr />
-        <!-- End Email Form -->
+      </div>
+      <form class="d-flex w-25">
+        <input class="form-control" id="search-input" type="search" placeholder="Search Website"
+          aria-label="Search" />
+        <a class="btn btn-outline-light text-light" id="search-button">Search</a>
+        <div id="search-results" class="shadow"></div>
+      </form>
     </div>
+  </nav>
+  <!-- End Navbar -->
+  <div class="main">
+
+    <!-- Begin Email Form -->
+    <h1>Email us using the form below</h1>
+    <form action="" method="">
+      <label for="name">Name:</label>
+      <input class="textbox-small" type="text" name="name">
+      <label for="email">Your Email:<span class="required-asterisk">*</span></label>
+      <!-- <input class="textbox-small" type="email" name="email" placeholder="example@gmail.com" required autofocus> -->
+      <input class="textbox-small" type="email" name="email" placeholder="example@gmail.com" required>
+      <label for="email">Recipient:</label>
+      <input class="textbox-small" type="email" name="email" style="width: auto" value="aibridgecamp@gmail.com"
+        readonly>
+      <textarea class="textbox" type="text" name="message"
+        placeholder="THIS FORM IS TEMPORARILY DOWN PLEASE EMAIL US DIRECTLY AT aibridgecamp@gmail.com"
+        required></textarea>
+      <button class="invalid">Send</button>
+    </form>
+    <hr />
+    <!-- End Email Form -->
+  </div>
 </body>
 
 <!-- Begin Footer -->
 <footer>
-    <img src="./img/AIFS_logo.png" />
-    <div>
-        <p>
-            <strong>
-                Sponsored by the
-                <a href="https://aifs.ucdavis.edu">
-                    AI Institute for Food Systems
-                </a>
-            </strong>
-            !
-        </p>
-        <p>
-            The AI Institute for Next Generation Food Systems, or AIFS, aims to meet growing demands in our food supply
-            by
-            increasing efficiencies using AI and bioinformatics spanning the entire system — from growing crops through
-            consumption.
-        </p>
-    </div>
+  <img src="./img/AIFS_logo.png" />
+  <div>
+    <p>
+      <strong>
+        Sponsored by the
+        <a href="https://aifs.ucdavis.edu">
+          AI Institute for Food Systems
+        </a>
+      </strong>
+      !
+    </p>
+    <p>
+      The AI Institute for Next Generation Food Systems, or AIFS, aims to meet growing demands in our food supply
+      by
+      increasing efficiencies using AI and bioinformatics spanning the entire system — from growing crops through
+      consumption.
+    </p>
+  </div>
 </footer>
 <!-- End Footer -->
 

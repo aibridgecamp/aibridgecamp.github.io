@@ -156,61 +156,10 @@ a[data-bs-target="#imgCarousel"]>img:hover {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* ----- All for join page ----- */
-/* TODO: refactor entire stylesheet in scss and clean up this section specifically */
-.recruiting-head {
-  background: none !important;
-  border: none !important;
-  color: white !important;
-  text-align: center;
-}
-.recruiting {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.recruiting > * {
-  margin: 0;
-  padding: 20px 0;
+.recruiting .card img {
   width: 100%;
-
-  background-size: 100%;
-  background-position: center;
+  height: 100%;
 }
-.recruiting-aibridge {
-  background-image: url("../img/aibridge_team.png");
-}
-.recruiting-aibridge > div {
-  width: 40%;
-  margin: 0 1rem 0 auto;
-}
-.recruiting-teacher {
-  background-image: url("../img/aibridge_teacher.png");
-}
-.recruiting-teacher > div {
-  width: 40%;
-  margin: 0 1rem 0 auto;
-}
-.recruiting-ta {
-  background-image: url("../img/aibridge_ta.png");
-  border-radius: 0 0 1rem 1rem;
-}
-.recruiting-ta > div {
-  width: 40%;
-  margin: 0 auto 0 1rem;
-}
-.recruiting-apply {
-  
-}
-.recruiting > div > * {
-  padding: 1rem;
-
-  color: black;
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 8px;
-}
-/* -------------------------------- */
 
 .no-bg {
   background: none !important;
@@ -249,7 +198,7 @@ footer img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   body {
     font-size: 16px;
   }

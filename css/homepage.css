@@ -106,7 +106,7 @@ a:not(.quick-links a, .dropdown-content a):hover {
   display: inline;
 
   height: 80px;
-  margin: 0 5px 0 0;
+  margin: 0 10px 0 0;
 }
 
 /* the dropdown button (png) */
@@ -114,6 +114,7 @@ a:not(.quick-links a, .dropdown-content a):hover {
   stroke: var(--main-background-color);
   background-color: var(--main-light-blue);
 
+  aspect-ratio: 1 / 1;
   margin: 4px 0 0 4px;
   padding: 5px;
   border-radius: 10%;
