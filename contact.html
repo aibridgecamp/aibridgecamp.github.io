@@ -47,48 +47,55 @@
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="main">
+
+  <div class="main shadow">
+    <h2 class="mx-4 mt-4">Email us using the form below</h2>
+    <p class="mx-4 lead">Expect 2-3 days for a response</p>
 
     <!-- Begin Email Form -->
-    <h1>Email us using the form below</h1>
-    <form action="" method="">
-      <label for="name">Name:</label>
-      <input class="textbox-small" type="text" name="name">
-      <label for="email">Your Email:<span class="required-asterisk">*</span></label>
-      <!-- <input class="textbox-small" type="email" name="email" placeholder="example@gmail.com" required autofocus> -->
-      <input class="textbox-small" type="email" name="email" placeholder="example@gmail.com" required>
-      <label for="email">Recipient:</label>
-      <input class="textbox-small" type="email" name="email" style="width: auto" value="aibridgecamp@gmail.com"
-        readonly>
-      <textarea class="textbox" type="text" name="message"
-        placeholder="THIS FORM IS TEMPORARILY DOWN PLEASE EMAIL US DIRECTLY AT aibridgecamp@gmail.com"
-        required></textarea>
-      <button class="invalid">Send</button>
+    <form class="m-4" action="https://getform.io/f/802f4a9f-2285-4bad-a4c7-49dc49974487" method="POST">
+      <div class="row mb-4">
+        <div class="form-group col-md-3">
+          <label for="name">Name:</label>
+          <input class="form-control" type="text" name="name">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="email">Your Email:<span class="text-danger">*</span></label>
+          <input class="form-control" type="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label>Recipient:</label>
+          <input class="form-control" style="width: auto" value="aibridgecamp@gmail.com" readonly>
+        </div>
+      </div>
+      <div class="form-group mb-4">
+        <textarea class="form-control" rows="10" name="message" placeholder="..." style="resize: none; cursor: auto;" required></textarea>
+      </div>
+      <button class="btn btn-success float-end w-25" type="submit">Send</button>
     </form>
-    <hr />
     <!-- End Email Form -->
   </div>
 </body>
 
+
 <!-- Begin Footer -->
-<footer>
-  <img src="./img/AIFS_logo.png" />
-  <div>
-    <p>
-      <strong>
-        Sponsored by the
-        <a href="https://aifs.ucdavis.edu">
-          AI Institute for Food Systems
-        </a>
-      </strong>
-      !
-    </p>
-    <p>
-      The AI Institute for Next Generation Food Systems, or AIFS, aims to meet growing demands in our food supply
-      by
-      increasing efficiencies using AI and bioinformatics spanning the entire system — from growing crops through
-      consumption.
-    </p>
+<footer class="bg-dark d-flex text-light shadow p-4">
+  <div class="row align-items-center">
+    <div class="col-auto">
+      <img src="./img/AIFS_logo.png" alt="ai food systems logo" class="img-fluid flex-shrink-0" />
+    </div>
+    <div class="container col-md-8 ml-0">
+      <h5 class="">
+        Sponsored by the<a href="https://aifs.ucdavis.edu">
+          AI Institute for Food Systems</a>!
+      </h5>
+      <p>
+        The AI Institute for Next Generation Food Systems, or AIFS, aims to
+        meet growing demands in our food supply by increasing efficiencies
+        using AI and bioinformatics spanning the entire system — from growing
+        crops through consumption.
+      </p>
+    </div>
   </div>
 </footer>
 <!-- End Footer -->
