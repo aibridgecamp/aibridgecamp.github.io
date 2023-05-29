@@ -19,3 +19,24 @@ Join Page:
 
 
 
+
+All Pages:
+- Join -> Join the Team
+- larger navbar font size
+
+Homepage:
+- cut the orange button
+- some text next to arrow: brief description of stuff on homepage
+
+Join Page:
+- try side image format
+
+Course Pages:
+- 1 row per day/lecture
+- switch schedule and external resources
+- change clicking so it doesn't collapse on clicking link
+
+Upcoming Page: 
+- Add course at UI UC
+
+

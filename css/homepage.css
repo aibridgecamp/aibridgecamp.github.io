@@ -272,6 +272,10 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   background-image: url("../img/cornell.png");
   background-size: cover;
 }
+.preview-item.uiuc {
+  background-image: url("../img/uiuc.png");
+  background-size: cover;
+}
 
 
 .info {
