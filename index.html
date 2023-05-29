@@ -39,7 +39,7 @@
           <a class="navlink" href="./classes.html">Upcoming</a>
           <a class="navlink" href="./photos.html">Past Camps</a>
           <a class="navlink" href="./contact.html">Contact</a>
-          <a class="navlink" href="./join.html">Join</a>
+          <a class="navlink" href="./join.html">Join The Team</a>
         </div>
       </div>
       <div class="title-text">
@@ -47,9 +47,6 @@
       </div>
       <div class="quick-links">
         <p class="flavor-text">bridging the gap between AI and application domains.</p>
-        <a href="./join.html">
-          <div class="button">Become a Teacher or TA</div>
-        </a>
       </div>
       <div class="down-arrow">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-down-lines" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -58,6 +55,7 @@
           <path d="M15 3h-6" />
           <path d="M15 6h-6" />
         </svg>
+        <p>More Details</p>
       </div>
     </div>
     <div class="preview">
@@ -101,7 +99,7 @@
       <h4 class="statistics-title">By the <span class="blue">numbers</span>:</h4>
       <div class="statistics-row">
         <div class="statistics-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-smile-beam" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-smile-beam" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z" />
             <path d="M10 10c-.5 -1 -2.5 -1 -3 0" />
@@ -112,7 +110,7 @@
           <p>Student Satisfaction</p>
         </div>
         <div class="statistics-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-vocabulary" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-vocabulary" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2z" />
             <path d="M12 5v16" />
@@ -126,7 +124,7 @@
           <p>Quality of Education</p>
         </div>
         <div class="statistics-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-share" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-share" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
             <path d="M6 21v-2a4 4 0 0 1 4 -4h3" />
@@ -137,7 +135,7 @@
           <p>Likely to Recommend</p>
         </div>
         <div class="statistics-item">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
             <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
@@ -182,11 +180,6 @@
           <hr />
           <p class="lead">We will be coding entirely using <strong class="blue">Python</strong> using Google Colab.</p>
         </div>
-        <div class="infotext">
-          <h4>Lorem ipsum dolor sit amet?</h4>
-          <hr />
-          <p class="lead">Lorem ipsum dolor sit amet <strong class="blue">convallis</strong> vivamus eget orci scelerisque.</p>
-        </div>
       </div>
     </div>
     <footer>
@@ -195,5 +188,17 @@
     </footer>
   </div>
 </body>
+
+<script>
+window.addEventListener('scroll', function() {
+  var arrowIcon = document.querySelector('.down-arrow');
+  
+  if (window.pageYOffset > 200) {
+    arrowIcon.style.opacity = 0;
+  } else {
+    arrowIcon.style.opacity = 1; 
+  }
+});
+</script>
 
 </html>

@@ -211,7 +211,16 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 .down-arrow {
   position: absolute;
   bottom: 0;
-  left: calc(50% - 50px);
+  left: calc(50% - 50px - 2em);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-style: italic;
+  font-weight: 300;
+
+  transition: opacity 0.5s ease-in-out;
 }
 
 
@@ -246,14 +255,14 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   text-decoration: none;
   background-color: rgb(240, 240, 240);
 
-  transition: aspect-ratio 0.5s ease-in-out !important;
+  transition: aspect-ratio 0.5s ease-in-out;
 }
 .preview-item:hover {
   box-shadow: 0 0 7px black;
   aspect-ratio: 1 / 1;
   cursor: pointer;
 
-  transition: aspect-ratio 0.5s ease-in-out !important;
+  transition: aspect-ratio 0.5s ease-in-out;
 }
 .preview-item > p {
   width: fit-content;
@@ -373,10 +382,9 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 }
 
 .statistics-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
   gap: 1rem;
 
   padding: 12px;
@@ -389,19 +397,26 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   justify-content: center;
   background-color: white;
 
-  width: 200px;
+  height: auto;
+  padding: 0.5em;
   aspect-ratio: 1 / 1;
   border-radius: 1rem;
 }
 
+.statistics-item > svg {
+  height: 2.5em;
+  width: 2.5em;
+}
+
 .statistics-item > h4 {
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 500;
 }
 
 .statistics-item > p {
   font-size: 0.4em;
   font-weight: 300;
+  text-align: center;
 }
 
 .invert-info {
@@ -455,12 +470,19 @@ footer,
     height: 60px;
   }
 
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
   .navbar {
     width: 100%;
   }
+  .navlink {
+    font-size: 0.6em;
+  }
 
   .title-text {
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 10% 0 10% 10%;
   }
 
@@ -470,6 +492,53 @@ footer,
 
   .button {
     font-size: 1.1em;
+  }
+
+  .preview {
+    padding: 8px;
+    gap: 5px;
+  }
+  .preview-item {
+    height: 80%;
+    aspect-ratio: 1 / 2;
+  }
+  .preview-item:hover {
+    aspect-ratio: 5 / 8;
+  }
+
+  .infogrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .infotitle {
+    grid-row: span 1;
+    grid-column: span 1;
+    font-size: 0.8em;
+  }
+  .infotext p {
+    font-size: 0.6em;
+  }
+  .vertical {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .horizontal {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .statistics-row {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .statistics-item {
+    padding: 0.3em;
+  }
+  .statistics-item > h4 {
+    font-size: 1.2em;
+  }
+  .statistics-item > p {
+    font-size: 0.8em;
   }
 
   footer {
