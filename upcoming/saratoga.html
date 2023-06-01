@@ -62,7 +62,7 @@
           <div class="d-flex w-100 justify-content-between mb-4">
             <h5 class="mb-1">Day 1</h5>
             <div>
-              <small>March 17</small>
+              <small>Upcoming</small>
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -135,7 +135,7 @@
           <div class="d-flex w-100 justify-content-between mb-4">
             <h5 class="mb-1">Day 2</h5>
             <div>
-              <small>March 18</small>
+              <small>Upcoming</small>
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -143,7 +143,7 @@
               </svg>
             </div>
           </div>
-          <div class="collapse collapse2">
+          <div class="collapse collapse2 show">
             <p>
               Lecture 3:
               <span>
@@ -211,7 +211,7 @@
           <div class="d-flex w-100 justify-content-between mb-4">
             <h5 class="mb-1">Day 3</h5>
             <div>
-              <small>March 24</small>
+              <small>Upcoming</small>
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -271,7 +271,7 @@
           <div class="d-flex w-100 justify-content-between mb-4">
             <h5 class="mb-1">Day 4</h5>
             <div>
-              <small>March 25</small>
+              <small>Upcoming</small>
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -382,13 +382,12 @@
     <!-- Begin Library Schedule -->
     <div class="library-schedule p-4">
       <h4>Saratoga Library Overall Schedule</h4>
-      <img src="../img/AIBridge_Saratoga_Schedule.png" alt="AI Bridge Saratoga Schedule" class="img-fluid" />
       <p>
         This course is taught by Samuel Ren, Jiaming Situ, and Houjun (Jack) in collaboration
         with Professor Xin Liu of UC Davis.
       </p>
-      <a target="_blank" href="https://sccl.bibliocommons.com/events/63c75044bdd26c41009e6f36" class="btn btn-success">
-        Registration and More Info
+      <a target="_blank" href="" class="btn btn-secondary">
+        Registration and More Info (soon)
       </a>
     </div>
     <!-- End Library Schedule -->
@@ -418,3 +417,12 @@
 <!-- End Footer -->
 
 </html>
+
+<!-- Prevents collapse from toggling when clicking a link within the collapse -->
+<script>
+  document.querySelectorAll('.collapse > p > span > a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+});
+</script>
