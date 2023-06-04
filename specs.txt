@@ -30,6 +30,7 @@ Homepage:
 
 Join Page:
 - try side image format
+    * update: https://docs.google.com/document/d/1wr0Zef31qjPRmLDwSuNADyD0g7tRZZVAVmUrVkTSZbQ/edit
 
 Course Pages:
 - 1 row per day/lecture
