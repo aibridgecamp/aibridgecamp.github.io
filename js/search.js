@@ -10,6 +10,9 @@ function searchFiles(regex) {
     "https://aibridgecamp.github.io/photos.html",
     "https://aibridgecamp.github.io/contact.html",
     "https://aibridgecamp.github.io/join.html",
+    "https://aibridgecamp.github.io/upcoming/cornell.html",
+    "https://aibridgecamp.github.io/upcoming/saratoga.html",
+    "https://aibridgecamp.github.io/upcoming/uiuc.html",
   ];
 
   files.forEach((file) => {
