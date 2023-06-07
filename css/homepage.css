@@ -381,6 +381,13 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   color: var(--main-light-blue);
 }
 
+.disclaimer {
+  color: white;
+  font-size: 0.4em;
+  font-style: italic;
+  font-weight: 100;
+}
+
 .statistics-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
