@@ -41,3 +41,34 @@ Upcoming Page:
 - Add course at UI UC
 
 
+
+
+All Pages:
+- Change UI UC to UIUC -WIP
+- Increase margins between the nav links 
+- Make homepage navbar spacing consistent with other pages’ navbar
+- Fix search function (Overflow on x, no results if keyword doesnt exist) - WIP
+
+Home Page:
+- About Us Section: Drop the “About Us” and make “Our Mission” the header
+- Put “People” section below the “About Us” box
+- “Machine Learning” → “AI”
+- Add “founded in 2022” somewhere in “Story” section
+
+Upcoming Page:
+- Cornell Course is 7/10 - 7/14
+- UIUC Course is 7/24 - 7/28
+
+Saratoga Course Page:
+- Add registration link to the course
+- Collapse day 2 by default
+- Drop “internal” and “external”
+
+New Pages:
+- NEW PAGE: make UC Davis 2022 Page
+- NEW PAGE: make Saratoga 2022 Page
+
+Past Courses Page: 
+- Add link to UC Davis 2022 Page 
+- Add link to Saratoga 2022 Page
+- Change ordering so newest page is always at the top
