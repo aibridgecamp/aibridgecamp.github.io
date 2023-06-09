@@ -34,6 +34,7 @@ Join Page:
 
 Course Pages:
 - 1 row per day/lecture
+    * update: implemented for day 1, not a fan of the format
 - switch schedule and external resources
 - change clicking so it doesn't collapse on clicking link
 
