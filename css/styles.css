@@ -79,6 +79,10 @@ a:not(a:hover) {
 }
 /* ------------------------- */
 
+.navbar-nav .nav-link {
+  margin-right: 0.3em;
+}
+
 .nav-separator {
   margin: auto 10px !important;
   padding: 0 !important;
