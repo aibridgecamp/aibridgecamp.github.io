@@ -73,3 +73,18 @@ Past Courses Page:
 - Add link to UC Davis 2022 Page 
 - Add link to Saratoga 2022 Page
 - Change ordering so newest page is always at the top
+
+
+
+Home Page: 
+- center navbar 
+
+
+Course Pages: 
+- resources: keep 1 line, make labs start at the same x-position
+- bold the labels
+
+
+Join Page:
+- current style for mobile, new style for desktop 
+
