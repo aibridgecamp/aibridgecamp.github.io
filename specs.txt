@@ -94,5 +94,13 @@ TOOD next meeting:
 - Saratoga  
 - Color scheme: https://coolors.co/15191d-809fc3-ce4257-ff7f51-ff9b54
 
+All Pages:
+- Add parallax effect to the background (blue) image
+
+Home Page:
+- Add parallax effect to the cover image
+
+
+
 
 
