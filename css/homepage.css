@@ -31,15 +31,8 @@ html {
 }
 
 body {
-  height: 100vh;
-
   font-family: "IBM Plex Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 2.5em;
-
-  overflow-x: hidden;
-  overflow-y: scroll;
-  perspective: 1px;
-  transform-style: preserve-3d;
 }
 
 img {
@@ -62,14 +55,26 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 }
 
 .main {
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
+
+  perspective: 1px;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform-style: preserve-3d;
+}
+
+.main > * {
+  z-index: 1;
 }
 
 .landing {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .parallax, .no-parallax {
