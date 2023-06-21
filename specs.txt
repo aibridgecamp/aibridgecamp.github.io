@@ -79,12 +79,20 @@ Past Courses Page:
 Home Page: 
 - center navbar 
 
-
 Course Pages: 
 - resources: keep 1 line, make labs start at the same x-position
 - bold the labels
 
-
 Join Page:
 - current style for mobile, new style for desktop 
+
+
+
+TOOD next meeting:
+- Python slides: make it consistent with AI slides
+- AI slides: make them all more consistent
+- Saratoga  
+- Color scheme: https://coolors.co/15191d-809fc3-ce4257-ff7f51-ff9b54
+
+
 
