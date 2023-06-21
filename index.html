@@ -190,13 +190,17 @@
 </body>
 
 <script>
-window.addEventListener('scroll', function() {
-  var arrowIcon = document.querySelector('.down-arrow');
-  
-  if (window.pageYOffset > 200) {
+const wrapper = document.querySelector('.main');
+const arrowIcon = document.querySelector('.down-arrow');
+wrapper.addEventListener('scroll', () => {
+  var scrollAmount = wrapper.scrollTop;
+  if (scrollAmount > 200) {
     arrowIcon.style.opacity = 0;
-  } else {
+    arrowIcon.style.bottom = "-100px";
+  } 
+  else {
     arrowIcon.style.opacity = 1; 
+    arrowIcon.style.bottom = 0;
   }
 });
 </script>

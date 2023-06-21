@@ -247,7 +247,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   font-style: italic;
   font-weight: 300;
 
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
 }
 
 
