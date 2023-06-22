@@ -179,6 +179,10 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   }
 }
 
+.flavor-text-wrapper {
+  display: inline-block;
+}
+
 .flavor-text {
   color: white;
   text-shadow: 0 4px 7px black;
@@ -186,8 +190,25 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   font-size: 0.75em;
   font-weight: 500;
 
-  margin-left: -16px;
-  margin-bottom: 20px;
+  padding: 8px 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-timing-function: steps(52, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 110%;
+  }
 }
 
 .quick-links {
@@ -199,9 +220,9 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   padding-left: 30%;
 }
 
-.quick-links a {
+/* .quick-links a {
   text-decoration: none;
-}
+} */
 
 .button {
   color: white;
