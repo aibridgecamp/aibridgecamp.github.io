@@ -282,7 +282,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   text-decoration: none;
   background-color: rgb(240, 240, 240);
 
-  transition: aspect-ratio 0.5s ease-in-out;
+  /* transition: aspect-ratio 0.5s ease-in-out; */
 }
 .preview-item:hover {
   box-shadow: 0 0 7px black;
@@ -300,17 +300,26 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   color: rgb(33, 37, 41);
   font-size: 0.5em;
 }
-.preview-item.saratoga {
-  background-image: url("../img/saratoga.png");
-  background-size: cover;
-}
 .preview-item.cornell {
   background-image: url("../img/cornell.png");
   background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 100ms;
 }
 .preview-item.uiuc {
   background-image: url("../img/uiuc.png");
   background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 250ms;
+}
+.preview-item.saratoga {
+  background-image: url("../img/saratoga.png");
+  background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 400ms;
+}
+.preview-item:not(.show) {
+  opacity: 0;
+}
+.preview-item.show {
+  opacity: 1;
 }
 
 
@@ -318,7 +327,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   background-color: rgb(240, 240, 240);
   color: black;
 }
-
 .infogrid {
   width: 80%;
   margin: 18px auto;
@@ -331,7 +339,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 
   font-size: 2rem;
 }
-
 .infogrid > * {
   padding: 0.6em;
   background-color: white;
@@ -339,7 +346,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 1rem;
 }
-
 .infotitle {
   grid-row: span 2;
   grid-column: span 2;
@@ -351,38 +357,31 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   justify-content: center;
   text-align: center;
 }
-
 .infotext {
   grid-column: span 1;
   grid-row: span 1;
 
   font-size: 0.7em;
 }
-
 .infotext h4 {
   text-align: center;
   font-size: 0.9em;
 }
-
 .infotext hr {
   margin: 0.2em 0 0.6em;
 }
-
 .infotext p {
   font-size: 0.7em;
 }
-
 .lead {
   font-size: 0.6em;
   line-height: 1.2;
   font-weight: 300;
 }
-
 .vertical {
   grid-column: span 1;
   grid-row: span 2;
 }
-
 .horizontal {
   grid-column: span 2;
   grid-row: span 1;
@@ -399,22 +398,18 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   border-bottom: 2px solid #4e6368;
   padding: 4px 0;
 }
-
 .statistics-title {
   color: white;
 }
-
 .blue {
   color: var(--main-light-blue);
 }
-
 .disclaimer {
   color: white;
   font-size: 0.4em;
   font-style: italic;
   font-weight: 100;
 }
-
 .statistics-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -423,7 +418,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 
   padding: 12px;
 }
-
 .statistics-item {
   display: flex;
   flex-direction: column;
@@ -436,17 +430,14 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   aspect-ratio: 1 / 1;
   border-radius: 1rem;
 }
-
 .statistics-item > svg {
   height: 2.5em;
   width: 2.5em;
 }
-
 .statistics-item > h4 {
   font-size: 0.7em;
   font-weight: 500;
 }
-
 .statistics-item > p {
   font-size: 0.4em;
   font-weight: 300;

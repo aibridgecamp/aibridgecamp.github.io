@@ -24,6 +24,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
   <link rel="stylesheet" href="css/homepage.css" />
+  <script src="./js/homepage.js" defer></script> 
 </head>
 
 <body>
@@ -61,19 +62,19 @@
     <div class="preview no-parallax">
       <h4>Upcoming Courses:</h4>
       <div class="preview-wrapper">
-        <a href="./upcoming/saratoga_august.html" class="preview-item saratoga">
-          <p>Saratoga Library</p>
-        </a>
-        <a href="./upcoming/cornell.html" class="preview-item cornell">
+        <a href="./upcoming/cornell.html" class="preview-item animate-on-scroll cornell">
           <p>Cornell University</p>
         </a>
-        <a href="./upcoming/uiuc.html" class="preview-item uiuc">
+        <a href="./upcoming/uiuc.html" class="preview-item animate-on-scroll uiuc">
           <p>UIUC</p>
+        </a>
+        <a href="./upcoming/saratoga_august.html" class="preview-item animate-on-scroll saratoga">
+          <p>Saratoga Library</p>
         </a>
       </div>
     </div>
     <div class="info">
-      <div class="infogrid">
+      <div class="infogrid animate-on-scroll">
         <div class="infotitle">
           <h4>Our Mission</h4>
         </div>
@@ -188,21 +189,5 @@
     </footer>
   </div>
 </body>
-
-<script>
-const wrapper = document.querySelector('.main');
-const arrowIcon = document.querySelector('.down-arrow');
-wrapper.addEventListener('scroll', () => {
-  var scrollAmount = wrapper.scrollTop;
-  if (scrollAmount > 200) {
-    arrowIcon.style.opacity = 0;
-    arrowIcon.style.bottom = "-100px";
-  } 
-  else {
-    arrowIcon.style.opacity = 1; 
-    arrowIcon.style.bottom = 0;
-  }
-});
-</script>
 
 </html>
