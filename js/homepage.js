@@ -9,7 +9,7 @@ const wrapper = document.querySelector(".main");
       arrowIcon.style.opacity = 0;
       arrowIcon.style.bottom = "-100px";
     } else {
-      arrowIcon.style.opacity = 1;
+      arrowIcon.style.opacity = 0.6;
       arrowIcon.style.bottom = 0;
     }
   });
