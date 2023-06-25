@@ -39,9 +39,8 @@
         </ul>
       </div>
       <form class="d-flex w-25">
-        <input class="form-control" id="search-input" type="search" placeholder="Search Website"
-          aria-label="Search" />
-        <a class="btn btn-outline-light text-light" id="search-button">Search</a>
+        <input class="form-control search" id="search-input" type="search" placeholder="Search Website" aria-label="Search" />
+        <a class="btn btn-outline-light text-light search-button" id="search-button">Search</a>
         <div id="search-results" class="shadow"></div>
       </form>
     </div>
@@ -57,7 +56,7 @@
       <div class="row mb-4">
         <div class="form-group col-md-3">
           <label for="name">Name:</label>
-          <input class="form-control" type="text" name="name">
+          <input class="form-control" type="text" name="name" placeholder="First and Last Name">
         </div>
         <div class="form-group col-md-3">
           <label for="email">Your Email:<span class="text-danger">*</span></label>
@@ -69,8 +68,9 @@
         </div>
       </div>
       <div class="form-group mb-4">
-        <textarea class="form-control" rows="10" name="message" placeholder="..." style="resize: none; cursor: auto;" required></textarea>
+        <textarea class="form-control" rows="10" name="message" placeholder="What you would like us to know" style="resize: none; cursor: auto;" required></textarea>
       </div>
+      <span style="color: red;">* </span><span style="color: black;">Are Required</span>
       <button class="btn btn-success float-end w-25" type="submit">Send</button>
     </form>
     <!-- End Email Form -->

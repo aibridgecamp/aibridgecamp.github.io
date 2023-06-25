@@ -91,6 +91,27 @@ a:not(a:hover) {
   background-color: rgba(255, 255, 255, 0.55);
 }
 
+input{
+  user-select: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+  outline-width: 0;
+}
+
+textarea {
+  user-select: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+  outline-width: 0;
+}
+
+.search{
+  user-select: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+  outline-width: 0;
+}
+
 #search-results {
   position: absolute;
   top: 100%;
@@ -101,16 +122,26 @@ a:not(a:hover) {
   padding: 0 10px;
   border-radius: 0 0 16px 16px;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   color: black;
   transition: height 0.5s ease;
 }
 
 .search-result-item {
+  /* white-space: nowrap; */
+  overflow: hidden;
   background-color: #ccc;
+  /* padding: 8px 0px 8px 10px; */
   padding: 8px 10px;
+  /* border-right: 10px solid #ccc; */
   margin: 12px 0;
   border-radius: 16px;
+  font-size: .85vw;
+}
+
+.search-button:hover {
+  color: black!important;
 }
 
 .card {

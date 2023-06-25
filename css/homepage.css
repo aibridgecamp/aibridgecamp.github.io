@@ -27,7 +27,7 @@
 
 html {
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -39,6 +39,10 @@ img {
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
+}
+
+h4 {
+  letter-spacing: -1.5px;
 }
 
 a:not(.quick-links a, .navlink, .preview-item) {
@@ -55,17 +59,43 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 }
 
 .main {
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
+
+  perspective: 1px;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform-style: preserve-3d;
+}
+
+.main > * {
+  z-index: 1;
 }
 
 .landing {
-  height: 100vh;
+  min-height: 100vh;
+}
 
-  background: var(--image-blur-style), url("../img/davisphoto4.jpg");
+.parallax, .no-parallax {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.parallax::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background: var(--image-blur-style), url("../img/davisphoto4.jpg") top center;
   background-size: cover;
+  transform: translateZ(-1px) scale(2.2);
+  z-index: -100;
 }
 
 .top-bar {
@@ -133,6 +163,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   color: var(--main-trim-color);
   text-shadow: 0 4px 7px black;
   font-size: 2em;
+  letter-spacing: -4px;
 
   border-bottom-right-radius: 8px;
 
@@ -153,6 +184,10 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   }
 }
 
+.flavor-text-wrapper {
+  display: inline-block;
+}
+
 .flavor-text {
   color: white;
   text-shadow: 0 4px 7px black;
@@ -160,8 +195,25 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   font-size: 0.75em;
   font-weight: 500;
 
-  margin-left: -16px;
-  margin-bottom: 20px;
+  padding: 8px 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-timing-function: steps(52, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 110%;
+  }
 }
 
 .quick-links {
@@ -173,9 +225,9 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   padding-left: 30%;
 }
 
-.quick-links a {
+/* .quick-links a {
   text-decoration: none;
-}
+} */
 
 .button {
   color: white;
@@ -218,10 +270,11 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   flex-direction: row;
   align-items: center;
   color: white;
+  opacity: 0.6;
   font-style: italic;
   font-weight: 300;
 
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
 }
 
 
@@ -233,6 +286,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   gap: 10px;
 
   height: 300px;
+  min-height: 300px;
   background-color: #2e3338;
   color: white;
   padding: 16px;
@@ -251,18 +305,19 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   height: 100%;
   aspect-ratio:  3 / 4;
   border-radius: 16px;
-
+  object-position: 50% 50%;
   font-size: 0.8em;
   text-decoration: none;
   background-color: rgb(240, 240, 240);
 
-  transition: aspect-ratio 0.5s ease-in-out;
+  /* transition: aspect-ratio 0.5s ease-in-out; */
 }
 .preview-item:hover {
   box-shadow: 0 0 7px black;
   aspect-ratio: 1 / 1;
   cursor: pointer;
-
+  text-align: center;
+  object-position: 50% 50%;
   transition: aspect-ratio 0.5s ease-in-out;
 }
 .preview-item > p {
@@ -274,25 +329,37 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   color: rgb(33, 37, 41);
   font-size: 0.5em;
 }
-.preview-item.saratoga {
-  background-image: url("../img/saratoga.png");
-  background-size: cover;
-}
 .preview-item.cornell {
   background-image: url("../img/cornell.png");
   background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 100ms;
+  background-position: center;
 }
 .preview-item.uiuc {
   background-image: url("../img/uiuc.png");
   background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 250ms;
+  background-position: center;
+}
+.preview-item.saratoga {
+  background-image: url("../img/saratoga.png");
+  background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 400ms;
+  background-position: center;
+}
+.preview-item:not(.show) {
+  opacity: 0;
+}
+.preview-item.show {
+  opacity: 1;
 }
 
 
 .info {
   background-color: rgb(240, 240, 240);
+  padding: 2em 0;
   color: black;
 }
-
 .infogrid {
   width: 80%;
   margin: 18px auto;
@@ -305,7 +372,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 
   font-size: 2rem;
 }
-
 .infogrid > * {
   padding: 0.6em;
   background-color: white;
@@ -313,7 +379,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 1rem;
 }
-
 .infotitle {
   grid-row: span 2;
   grid-column: span 2;
@@ -325,38 +390,32 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   justify-content: center;
   text-align: center;
 }
-
 .infotext {
   grid-column: span 1;
   grid-row: span 1;
 
   font-size: 0.7em;
 }
-
 .infotext h4 {
-  text-align: center;
   font-size: 0.9em;
+  line-height: 1.1em;
 }
-
 .infotext hr {
   margin: 0.2em 0 0.6em;
 }
-
 .infotext p {
   font-size: 0.7em;
+  line-height: 1.15em;
 }
-
 .lead {
   font-size: 0.6em;
   line-height: 1.2;
   font-weight: 300;
 }
-
 .vertical {
   grid-column: span 1;
   grid-row: span 2;
 }
-
 .horizontal {
   grid-column: span 2;
   grid-row: span 1;
@@ -373,22 +432,19 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   border-bottom: 2px solid #4e6368;
   padding: 4px 0;
 }
-
 .statistics-title {
   color: white;
+  font-size: 1.2em;
 }
-
 .blue {
   color: var(--main-light-blue);
 }
-
 .disclaimer {
   color: white;
   font-size: 0.4em;
   font-style: italic;
   font-weight: 100;
 }
-
 .statistics-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -397,7 +453,6 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 
   padding: 12px;
 }
-
 .statistics-item {
   display: flex;
   flex-direction: column;
@@ -410,17 +465,14 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   aspect-ratio: 1 / 1;
   border-radius: 1rem;
 }
-
 .statistics-item > svg {
   height: 2.5em;
   width: 2.5em;
 }
-
 .statistics-item > h4 {
   font-size: 0.7em;
   font-weight: 500;
 }
-
 .statistics-item > p {
   font-size: 0.4em;
   font-weight: 300;
@@ -470,6 +522,7 @@ footer,
 
 @media (max-width: 1200px) {
   .infogrid {
+    width: 95%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
