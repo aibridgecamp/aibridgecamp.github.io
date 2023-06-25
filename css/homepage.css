@@ -304,7 +304,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   height: 100%;
   aspect-ratio:  3 / 4;
   border-radius: 16px;
-
+  object-position: 50% 50%;
   font-size: 0.8em;
   text-decoration: none;
   background-color: rgb(240, 240, 240);
@@ -315,7 +315,8 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   box-shadow: 0 0 7px black;
   aspect-ratio: 1 / 1;
   cursor: pointer;
-
+  text-align: center;
+  object-position: 50% 50%;
   transition: aspect-ratio 0.5s ease-in-out;
 }
 .preview-item > p {
@@ -331,16 +332,19 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   background-image: url("../img/cornell.png");
   background-size: cover;
   transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 100ms;
+  background-position: center;
 }
 .preview-item.uiuc {
   background-image: url("../img/uiuc.png");
   background-size: cover;
   transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 250ms;
+  background-position: center;
 }
 .preview-item.saratoga {
   background-image: url("../img/saratoga.png");
   background-size: cover;
   transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 400ms;
+  background-position: center;
 }
 .preview-item:not(.show) {
   opacity: 0;
