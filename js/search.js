@@ -32,7 +32,7 @@ function searchFiles(regex) {
             );
             let searchResult = document.createElement('div');
             searchResult.classList.add('search-result-item');
-            searchResult.innerHTML = `<p>...${preview}...<p><a href="${file}">${file}</a>`;
+            searchResult.innerHTML = `<p>...${preview}...<p><a href="${file}">Go To Source ⇒</a>`;
             searchResults.appendChild(searchResult);
           }
         });
