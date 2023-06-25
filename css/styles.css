@@ -91,6 +91,20 @@ a:not(a:hover) {
   background-color: rgba(255, 255, 255, 0.55);
 }
 
+input{
+  user-select: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+  outline-width: 0;
+}
+
+textarea {
+  user-select: none!important;
+  outline: none!important;
+  box-shadow: none!important;
+  outline-width: 0;
+}
+
 .search{
   user-select: none!important;
   outline: none!important;
