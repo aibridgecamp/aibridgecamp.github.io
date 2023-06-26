@@ -101,6 +101,9 @@ Home Page:
 - Add parallax effect to the cover image
 
 
-
+Make animation of number increasing
+Text bigger
+Make past camp page more consistent with upcoming page
+Upcoming page: make other boxes consistent with Saratoga and update image size
 
 
