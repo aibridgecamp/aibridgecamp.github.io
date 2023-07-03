@@ -125,9 +125,12 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 .navlink {
   text-decoration: none;
   position: relative;
-  color: white;
+  color: rgba(255, 255, 255, 0.55);
 
   font-size: 1rem;
+}
+.navlink.active {
+  color: white;
 }
 
 .navlink:hover {
@@ -148,6 +151,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   transition: width 0.2s ease-in-out;
 }
 
+.navlink.active::after,
 .navlink:hover::after {
   width: 90%;
   transform: translateX(-50%) scaleX(1);
