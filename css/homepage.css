@@ -565,6 +565,7 @@ footer,
 
   .banner {
     z-index : 10;
+    position: relative;
     height: 60px;
   }
 
@@ -588,18 +589,21 @@ footer,
 
   .title-text {
     z-index: 10;
+    position: relative;
     font-size: 1.5em;
     margin: 10% 0 10% 10%;
   }
 
   .quick-links {
     z-index: 10;
+    position: relative;
     padding-left: 20%;
   }
   
   .flavortext,
   .title-text strong {
     z-index: 11;
+    position: relative;
   }
 
   .button {
