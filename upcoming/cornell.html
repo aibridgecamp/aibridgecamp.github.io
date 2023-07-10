@@ -71,7 +71,7 @@
               </svg>
             </div>
           </div>
-          <div class="collapse collapse1">
+          <div class="collapse collapse1 show">
             <p>
               Lecture 1: 
               <span><a href="../assets/AIBridge Lecture 1.pptx">Slides</a></span>
@@ -80,7 +80,7 @@
               Lab 1: 
               <span><a href="https://colab.research.google.com/drive/1MlETo1cyM8XHTitEVvwnhBTY2q6Df4jk?usp=sharing">Template</a></span>
               |
-              <span>Demo</span>
+              <span><a href="https://colab.research.google.com/drive/1OeoVBmDSOz7o_TC4Sl-EKyWJ8Oz6iAoN?usp=sharing">Demo</a></span>
               |
               <span><a href="https://docs.google.com/document/d/1Ydj6GHsnm0ZtswH7i69iccpfGRAbn1CD7IrKRPRFeiw/edit?usp=sharing">Task</a></span>
               |
@@ -183,3 +183,12 @@
 <!-- End Footer -->
 
 </html>
+
+<!-- Prevents collapse from toggling when clicking a link within the collapse -->
+<script>
+  document.querySelectorAll('.collapse > p > span > a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+});
+</script>
