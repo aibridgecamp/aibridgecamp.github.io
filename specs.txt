@@ -1,106 +1,18 @@
 
-All Pages:
-- navbar add home link to the left
-- verify consistency for all pages
+TODO:
 
-Home Page: 
-- change menu bar button to the 3 lines icon
-- move menu bar button to the top left
+- Cornell course:
+  - remove card from upcoming page
+  - add to past courses page with a button that links to the site
+  - physically move and rename and refactor into past camps folder
 
-Classes Page: 
-- expand slideshow to entire width
-- use a sliding bar instead of image thumbnails for slideshow navigation
-
-Join Page:
-- move title to center
-- image vignette filter: black --> light gray
-- white bg, dark text
-- add another element to the right of "Apply for a position" card
+- About Me:
+  - get more people to put their info
 
 
-
-
-All Pages:
-- Join -> Join the Team
-- larger navbar font size
-
-Homepage:
-- cut the orange button
-- some text next to arrow: brief description of stuff on homepage
-
-Join Page:
-- try side image format
-    * update: https://docs.google.com/document/d/1wr0Zef31qjPRmLDwSuNADyD0g7tRZZVAVmUrVkTSZbQ/edit
-
-Course Pages:
-- 1 row per day/lecture
-    * update: implemented for day 1, not a fan of the format
-- switch schedule and external resources
-- change clicking so it doesn't collapse on clicking link
-
-Upcoming Page: 
-- Add course at UI UC
-
-
-
-
-All Pages:
-- Change UI UC to UIUC -WIP
-- Increase margins between the nav links 
-- Make homepage navbar spacing consistent with other pages’ navbar
-- Fix search function (Overflow on x, no results if keyword doesnt exist) - WIP
-
-Home Page:
-- About Us Section: Drop the “About Us” and make “Our Mission” the header
-- Put “People” section below the “About Us” box
-- “Machine Learning” → “AI”
-- Add “founded in 2022” somewhere in “Story” section
-
-Upcoming Page:
-- Cornell Course is 7/10 - 7/14
-- UIUC Course is 7/24 - 7/28
-
-Saratoga Course Page:
-- Add registration link to the course
-- Collapse day 2 by default
-- Drop “internal” and “external”
-
-New Pages:
-- NEW PAGE: make UC Davis 2022 Page
-- NEW PAGE: make Saratoga 2022 Page
-
-Past Courses Page: 
-- Add link to UC Davis 2022 Page 
-- Add link to Saratoga 2022 Page
-- Change ordering so newest page is always at the top
-
-
-
-Home Page: 
-- center navbar 
-
-Course Pages: 
-- resources: keep 1 line, make labs start at the same x-position
-- bold the labels
-
-Join Page:
-- current style for mobile, new style for desktop 
-
-
-
-TOOD next meeting:
-- Python slides: make it consistent with AI slides
-- AI slides: make them all more consistent
-- Saratoga  
-- Color scheme: https://coolors.co/15191d-809fc3-ce4257-ff7f51-ff9b54
-
-All Pages:
-- Add parallax effect to the background (blue) image
-
-Home Page:
-- Add parallax effect to the cover image
-
-
-
-
+- Design:
+  - add more animations, onScroll animations, fancy stuff, etc.
+     - prioritize homepage
+  - customize navbar, looks kind of bland at the moment
+  - redesign the join us page, use different style
 
