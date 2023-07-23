@@ -9,7 +9,6 @@ TODO:
 - About Me:
   - get more people to put their info
 
-
 - Design:
   - add more animations, onScroll animations, fancy stuff, etc.
      - prioritize homepage
