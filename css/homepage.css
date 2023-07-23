@@ -125,9 +125,13 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 .navlink {
   text-decoration: none;
   position: relative;
-  color: white;
+  color: rgba(255, 255, 255, 0.55);
+  z-index: 100;
 
   font-size: 1rem;
+}
+.navlink.active {
+  color: white;
 }
 
 .navlink:hover {
@@ -148,6 +152,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   transition: width 0.2s ease-in-out;
 }
 
+.navlink.active::after,
 .navlink:hover::after {
   width: 90%;
   transform: translateX(-50%) scaleX(1);
@@ -559,7 +564,16 @@ footer,
   }
 
   .banner {
+    z-index : 10;
+    position: relative;
     height: 60px;
+  }
+
+  .parallax > * {
+    z-index: 3;
+  }
+  .parallax::before {
+    z-index: 2;
   }
 
   .top-bar {
@@ -574,12 +588,22 @@ footer,
   }
 
   .title-text {
+    z-index: 10;
+    position: relative;
     font-size: 1.5em;
     margin: 10% 0 10% 10%;
   }
 
   .quick-links {
+    z-index: 10;
+    position: relative;
     padding-left: 20%;
+  }
+  
+  .flavortext,
+  .title-text strong {
+    z-index: 11;
+    position: relative;
   }
 
   .button {
