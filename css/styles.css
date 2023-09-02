@@ -217,6 +217,18 @@ footer img {
   width: 100px;
 }
 
+.join-us-text {
+  background-color: black;
+  opacity: .8;
+  margin: 0 !important;
+  padding: 24px;
+  z-index: 5;
+  box-shadow: 6px 0px 10px 2px black, 0px -6px 10px 2px black;
+}
+
+.join-img {
+  filter: brightness(400%);
+}
 
 @media (max-width: 1000px) {
   nav ul {
