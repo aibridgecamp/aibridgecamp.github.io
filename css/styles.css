@@ -209,6 +209,13 @@ a[data-bs-target="#imgCarousel"]>img:hover {
   border: none !important;
 }
 
+.small.lead {
+  font-size: 1em !important;
+  font-style: italic !important;
+  margin-top: -8px !important;
+  color: #888;
+}
+
 footer {
   max-height: 400px;
 }
