@@ -4,15 +4,16 @@ let searchButton = document.getElementById("search-button");
 
 function searchFiles(regex) {
   const files = [
-    "https://aibridgecamp.github.io/index.html",
-    "https://aibridgecamp.github.io/about.html",
-    "https://aibridgecamp.github.io/classes.html",
-    "https://aibridgecamp.github.io/photos.html",
-    "https://aibridgecamp.github.io/contact.html",
-    "https://aibridgecamp.github.io/join.html",
-    "https://aibridgecamp.github.io/upcoming/cornell.html",
-    "https://aibridgecamp.github.io/upcoming/saratoga_august.html",
-    "https://aibridgecamp.github.io/upcoming/uiuc.html",
+    "https://aibridge.us/index.html",
+    "https://aibridge.us/about.html",
+    "https://aibridge.us/classes.html",
+    "https://aibridge.us/photos.html",
+    "https://aibridge.us/contact.html",
+    "https://aibridge.us/join.html",
+    "https://aibridge.us/past/saratoga_march.html",
+    "https://aibridge.us/past/cornell.html",
+    "https://aibridge.us/upcoming/uiuc.html",
+    "https://aibridge.us/upcoming/saratoga_august.html",
   ];
 
   files.forEach((file) => {
