@@ -108,6 +108,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 
   height: 80px;
   margin: 0;
+  padding: 4px 12px;
 }
 
 .navbar {
