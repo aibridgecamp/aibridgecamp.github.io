@@ -579,7 +579,6 @@ footer,
 
   .top-bar {
     flex-direction: column;
-    align-items: center;
   }
   .navbar {
     width: 100%;
@@ -592,13 +591,13 @@ footer,
     z-index: 10;
     position: relative;
     font-size: 1.5em;
-    margin: 10% 0 10% 10%;
+    margin: 10% 0 2% 10%;
   }
 
   .quick-links {
     z-index: 10;
     position: relative;
-    padding-left: 20%;
+    padding-left: 3%;
   }
   
   .flavortext,
@@ -643,6 +642,6 @@ footer,
   }
 
   footer {
-    font-size: 0.75em;
+    font-size: 0.4em;
   }
 }
