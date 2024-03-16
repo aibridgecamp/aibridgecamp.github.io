@@ -353,6 +353,12 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 400ms;
   background-position: center;
 }
+.preview-item.cupertino {
+  background-image: url("../img/cupertino.jpg");
+  background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 100ms;
+  background-position: center;
+}
 .preview-item:not(.show) {
   opacity: 0;
 }
