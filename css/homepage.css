@@ -333,7 +333,7 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
   border-radius: 16px;
   background-color: white;
   color: rgb(33, 37, 41);
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
 .preview-item.cornell {
   background-image: url("../img/cornell.png");
@@ -355,6 +355,12 @@ a:not(.quick-links a, .navlink, .preview-item):hover {
 }
 .preview-item.cupertino {
   background-image: url("../img/cupertino.jpg");
+  background-size: cover;
+  transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 100ms;
+  background-position: center;
+}
+.preview-item.ucdavis2024 {
+  background-image: url("../img/ucd24.jpg");
   background-size: cover;
   transition: aspect-ratio 0.5s ease-in-out, opacity 1s ease-in-out 100ms;
   background-position: center;

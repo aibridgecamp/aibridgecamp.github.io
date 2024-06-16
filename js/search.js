@@ -14,6 +14,7 @@ function searchFiles(regex) {
     "https://aibridge.us/past/cornell.html",
     "https://aibridge.us/upcoming/uiuc.html",
     "https://aibridge.us/upcoming/saratoga_august.html",
+    "https://aibridge.us/upcoming/ucdavis_2024.html",
   ];
 
   files.forEach((file) => {
