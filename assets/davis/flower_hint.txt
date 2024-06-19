@@ -1,0 +1,1 @@
+This one should be pretty clear: the output formatting is inconsistent. You can probably try to make some code to automate it but the fastest way is just to do it manually, since it's such a small size. For larger datasets like this you'd want to automate it.

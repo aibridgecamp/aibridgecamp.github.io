@@ -1,0 +1,1 @@
+The dataset is imbalanced here and has only two instances of fraud. A model isn't going to be great here, and SVM is probably your best bet. Ideally you'd want to get more data on the fraud.
